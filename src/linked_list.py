@@ -21,7 +21,7 @@ class LinkedList:
             new_node = Node(value, self.head)
             self.head = new_node
             self.size += 1
-    
+
     def insert_at_end(self, value):
         """Insert value into the tail of the linked list"""
 
@@ -33,7 +33,7 @@ class LinkedList:
 
     def remove_at_end(self):
         """Traverse list and remove the tail node and return it"""
-    
+
     def remove_value(self, value):
         """Traverse and remove the first encountered value"""
 
