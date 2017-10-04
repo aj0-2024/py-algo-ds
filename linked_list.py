@@ -37,6 +37,9 @@ class LinkedList:
     def remove_value(self, value):
         """Traverse and remove the first encountered value"""
 
+    def has_value(self, value):
+        """Traverse and check if the linked list has given value"""
+
     def get_size(self):
         """TODO: Use getter, Get the size of the linked list"""
         return self.size
