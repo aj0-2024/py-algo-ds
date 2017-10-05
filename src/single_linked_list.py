@@ -1,4 +1,13 @@
-"""Implement the linked list data structure"""
+"""
+Single Linked List
+
+When to use ?
+1. When you want an insert into the beginning of the list quickly
+
+When not to use ?
+1. Linked list needs more memory than array, so if memory is a concern then better to choose array over linked list
+   Linked list needs more memory for storing references
+"""
 
 class Node:
     """Node contains value and reference to the next node"""
