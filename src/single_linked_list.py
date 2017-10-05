@@ -34,6 +34,9 @@ class LinkedList:
     def insert_at_end(self, value):
         """Insert value into the tail of the linked list"""
 
+    def insert(self, atNode):
+        """Insert value at node"""
+
     def traverse_list(self):
         """Traverse and print out the values in the list"""
 
