@@ -15,7 +15,7 @@ class Node:
         self.val = val
         self.next = next_node
 
-class LinkedList:
+class SingleLinkedList:
     """Linked list is useful for efficient add at the first"""
     def __init__(self):
         self.head = None
@@ -34,7 +34,7 @@ class LinkedList:
     def insert_at_end(self, value):
         """Insert value into the tail of the linked list"""
 
-    def insert(self, atNode):
+    def insert(self, atNode, value):
         """Insert value at node"""
 
     def traverse_list(self):
@@ -46,11 +46,14 @@ class LinkedList:
     def remove_at_end(self):
         """Traverse list and remove the tail node and return it"""
 
-    def remove_value(self, value):
+    def remove(self, value):
         """Traverse and remove the first encountered value"""
 
     def has_value(self, value):
         """Traverse and check if the linked list has given value"""
+
+    def to_array(self):
+        """Convert the linked list into an array"""
 
     def get_size(self):
         """TODO: Use getter, Get the size of the linked list"""
