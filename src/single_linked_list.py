@@ -18,18 +18,18 @@ class Node:
 class SingleLinkedList:
     """Linked list is useful for efficient add at the first"""
     def __init__(self):
-        self.head = None
-        self.size = 0
+        self._head = None
+        self._size = 0
 
     def insert_at_start(self, value):
         """Insert value into the head of the linked list"""
-        if self.head is None:
+        if self._head is None:
             new_node = Node(value, None)
-            self.head = new_node
+            self._head = new_node
         else:
-            new_node = Node(value, self.head)
-            self.head = new_node
-            self.size += 1
+            new_node = Node(value, self._head)
+            self._head = new_node
+            self._size += 1
 
     def insert_at_end(self, value):
         """Insert value into the tail of the linked list"""
@@ -51,10 +51,23 @@ class SingleLinkedList:
 
     def has_value(self, value):
         """Traverse and check if the linked list has given value"""
+        if self._size == 0:
+            return False
+        else:
+            curr = self._head
+            found = False
+            while curr is not None:
+                if curr.val == value:
+                    found = True
+                    break
+                else:
+                    curr = curr.next
+            return found
 
     def to_array(self):
         """Convert the linked list into an array"""
 
-    def get_size(self):
+    @property
+    def size(self):
         """TODO: Use getter, Get the size of the linked list"""
-        return self.size
+        return self._size
