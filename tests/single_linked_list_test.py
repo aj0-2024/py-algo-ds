@@ -21,10 +21,30 @@ class TestSingleLinkedList(unittest.TestCase):
         """Test the insert at start for normal and edge cases"""
         self._list.insert_at_start(1)
         self.assertEqual(self._list.size, 1)
+        self.assertEqual(self._list.head, 1)
 
-    def test_insert_at_end(self):
-        """"""
-        self.assertEqual(True, False)
+    def test_insert_at_start_for_multiple_values(self):
+        """Insert multiple values and test the order"""
+        self._list.insert_at_start(2)
+        self._list.insert_at_start(3)
+        self._list.insert_at_start(4)
+        self._list.insert_at_start(5)
+        self.assertListEqual(self._list.to_array(), [5, 4, 3, 2, 1])
+        
+    def test_insert_at_end_when_list_is_empty(self):
+        """Test insert a value at the end"""
+        self._list.insert_at_end(2)
+        self.assertEqual(self._list.size, 1)
+        self.assertEqual(self._list.head, 2)
+
+    def test_insert_at_end_by_inserting_multiple_values(self):
+        """Insert multiple values and test the order"""
+        self._list.insert_at_end(1)
+        self._list.insert_at_end(1)
+        self._list.insert_at_end(2)
+        self._list.insert_at_end(3)
+        self._list.insert_at_end(5)
+        self.assertListEqual(self._list.to_array(), [1, 1, 2, 3, 5])
 
     def test_insert(self):
         """"""
@@ -47,11 +67,9 @@ class TestSingleLinkedList(unittest.TestCase):
         self._list.insert_at_start(10)
         self._list.insert_at_start(20)
         self._list.insert_at_start(25)
-
         self.assertEqual(self._list.has_value(10), True)
         self.assertEqual(self._list.has_value(20), True)
         self.assertEqual(self._list.has_value(25), True)
-
         self.assertEqual(self._list.has_value(-100), False)
 
     def test_has_value_empty_list(self):
