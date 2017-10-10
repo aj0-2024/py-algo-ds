@@ -30,9 +30,24 @@ class SingleLinkedList:
             new_node = Node(value, self._head)
             self._head = new_node
             self._size += 1
+        return self._size
 
     def insert_at_end(self, value):
         """Insert value into the tail of the linked list"""
+        curr = self._head
+
+        # if empty add as first element
+        if self._head is None:
+            tail = Node(value, None)
+            self._head = tail
+        else:
+            # traverse till the tail
+            while curr.next is not None:
+                curr = curr.next
+            # set the new tails
+            tail = Node(value, None)
+            curr.next = tail
+        return self._size
 
     def insert(self, atNode, value):
         """Insert value at node"""
@@ -66,8 +81,22 @@ class SingleLinkedList:
 
     def to_array(self):
         """Convert the linked list into an array"""
+        curr = self._head
+        output_arr = []
+        while curr is not None:
+            output_arr.append(curr.val)
+            curr = curr.next            
+        return output_arr
 
     @property
     def size(self):
-        """TODO: Use getter, Get the size of the linked list"""
+        """Get the size of the linked list"""
         return self._size
+    
+    @property
+    def head(self):
+        """Get the head element of the list"""
+        if self._head is not None:
+            return self._head.val
+        else:
+            return None

@@ -8,17 +8,16 @@ DoubleLinkedList	../src/double_linked_list.py	/^class DoubleLinkedList:$/;"	kind
 Node	../src/double_linked_list.py	/^class Node:$/;"	kind:class	line:8
 Node	../src/single_linked_list.py	/^class Node:$/;"	kind:class	line:12
 SingleLinkedList	../src/single_linked_list.py	/^class SingleLinkedList:$/;"	kind:class	line:18
-SingleLinkedList	../test/single_linked_list_test.py	/^from src.single_linked_list import SingleLinkedList$/;"	kind:namespace	line:8
-TestSingleLinkedList	../test/single_linked_list_test.py	/^class TestSingleLinkedList(unittest.TestCase):$/;"	kind:class	line:10
+SingleLinkedList	../tests/single_linked_list_test.py	/^from src.single_linked_list import SingleLinkedList$/;"	kind:namespace	line:11
+TestSingleLinkedList	../tests/single_linked_list_test.py	/^class TestSingleLinkedList(unittest.TestCase):$/;"	kind:class	line:13
 __init__	../src/double_linked_list.py	/^    def __init__(self):$/;"	kind:member	line:19
 __init__	../src/double_linked_list.py	/^    def __init__(self, value, prevNode, nextNode):$/;"	kind:member	line:11
 __init__	../src/single_linked_list.py	/^    def __init__(self):$/;"	kind:member	line:20
 __init__	../src/single_linked_list.py	/^    def __init__(self, val, next_node):$/;"	kind:member	line:14
 __init__.py	../src/__init__.py	1;"	kind:file	line:1
-__init__.py	../test/__init__.py	1;"	kind:file	line:1
+__init__.py	../tests/__init__.py	1;"	kind:file	line:1
 double_linked_list.py	../src/double_linked_list.py	1;"	kind:file	line:1
-double_linked_list_test.py	../test/double_linked_list_test.py	1;"	kind:file	line:1
-get_size	../src/single_linked_list.py	/^    def get_size(self):$/;"	kind:member	line:58
+double_linked_list_test.py	../tests/double_linked_list_test.py	1;"	kind:file	line:1
 has_value	../src/single_linked_list.py	/^    def has_value(self, value):$/;"	kind:member	line:52
 insert	../src/double_linked_list.py	/^    def insert(self, value):$/;"	kind:member	line:25
 insert	../src/single_linked_list.py	/^    def insert(self, atNode, value):$/;"	kind:member	line:37
@@ -27,21 +26,21 @@ insert_at_start	../src/single_linked_list.py	/^    def insert_at_start(self, val
 remove	../src/single_linked_list.py	/^    def remove(self, value):$/;"	kind:member	line:49
 remove_at_end	../src/single_linked_list.py	/^    def remove_at_end(self):$/;"	kind:member	line:46
 remove_at_start	../src/single_linked_list.py	/^    def remove_at_start(self):$/;"	kind:member	line:43
-setUp	../test/single_linked_list_test.py	/^    def setUp(self):$/;"	kind:member	line:13
+setUp	../tests/single_linked_list_test.py	/^    def setUp(self):$/;"	kind:member	line:16
 single_linked_list.py	../src/single_linked_list.py	1;"	kind:file	line:1
-single_linked_list_test.py	../test/single_linked_list_test.py	1;"	kind:file	line:1
-tearDown	../test/single_linked_list_test.py	/^    def tearDown(self):$/;"	kind:member	line:17
-test_get_size_after_item_insert_at_start	../test/single_linked_list_test.py	/^    def test_get_size_after_item_insert_at_start(self):$/;"	kind:member	line:56
-test_get_size_after_item_removal_at_start	../test/single_linked_list_test.py	/^    def test_get_size_after_item_removal_at_start(self):$/;"	kind:member	line:62
-test_get_size_when_list_is_empty	../test/single_linked_list_test.py	/^    def test_get_size_when_list_is_empty(self):$/;"	kind:member	line:51
-test_has_value	../test/single_linked_list_test.py	/^    def test_has_value(self):$/;"	kind:member	line:43
-test_insert	../test/single_linked_list_test.py	/^    def test_insert(self):$/;"	kind:member	line:27
-test_insert_at_end	../test/single_linked_list_test.py	/^    def test_insert_at_end(self):$/;"	kind:member	line:23
-test_insert_at_start	../test/single_linked_list_test.py	/^    def test_insert_at_start(self):$/;"	kind:member	line:20
-test_remove	../test/single_linked_list_test.py	/^    def test_remove(self):$/;"	kind:member	line:39
-test_remove_at_end	../test/single_linked_list_test.py	/^    def test_remove_at_end(self):$/;"	kind:member	line:35
-test_remove_at_start	../test/single_linked_list_test.py	/^    def test_remove_at_start(self):$/;"	kind:member	line:31
-test_to_array	../test/single_linked_list_test.py	/^    def test_to_array(self):$/;"	kind:member	line:47
-to_array	../src/single_linked_list.py	/^    def to_array(self):$/;"	kind:member	line:55
+single_linked_list_test.py	../tests/single_linked_list_test.py	1;"	kind:file	line:1
+size	../src/single_linked_list.py	/^    def size(self):$/;"	kind:member	line:71
+test_get_size_after_item_removal_at_start	../tests/single_linked_list_test.py	/^    def test_get_size_after_item_removal_at_start(self):$/;"	kind:member	line:68
+test_get_size_when_list_is_empty	../tests/single_linked_list_test.py	/^    def test_get_size_when_list_is_empty(self):$/;"	kind:member	line:64
+test_has_value	../tests/single_linked_list_test.py	/^    def test_has_value(self):$/;"	kind:member	line:45
+test_has_value_empty_list	../tests/single_linked_list_test.py	/^    def test_has_value_empty_list(self):$/;"	kind:member	line:57
+test_insert	../tests/single_linked_list_test.py	/^    def test_insert(self):$/;"	kind:member	line:29
+test_insert_at_end	../tests/single_linked_list_test.py	/^    def test_insert_at_end(self):$/;"	kind:member	line:25
+test_insert_at_start	../tests/single_linked_list_test.py	/^    def test_insert_at_start(self):$/;"	kind:member	line:20
+test_remove	../tests/single_linked_list_test.py	/^    def test_remove(self):$/;"	kind:member	line:41
+test_remove_at_end	../tests/single_linked_list_test.py	/^    def test_remove_at_end(self):$/;"	kind:member	line:37
+test_remove_at_start	../tests/single_linked_list_test.py	/^    def test_remove_at_start(self):$/;"	kind:member	line:33
+test_to_array	../tests/single_linked_list_test.py	/^    def test_to_array(self):$/;"	kind:member	line:60
+to_array	../src/single_linked_list.py	/^    def to_array(self):$/;"	kind:member	line:67
 traverse_list	../src/single_linked_list.py	/^    def traverse_list(self):$/;"	kind:member	line:40
-unittest	../test/single_linked_list_test.py	/^import unittest$/;"	kind:namespace	line:7
+unittest	../tests/single_linked_list_test.py	/^import unittest$/;"	kind:namespace	line:10
