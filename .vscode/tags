@@ -18,29 +18,32 @@ __init__.py	../src/__init__.py	1;"	kind:file	line:1
 __init__.py	../tests/__init__.py	1;"	kind:file	line:1
 double_linked_list.py	../src/double_linked_list.py	1;"	kind:file	line:1
 double_linked_list_test.py	../tests/double_linked_list_test.py	1;"	kind:file	line:1
-has_value	../src/single_linked_list.py	/^    def has_value(self, value):$/;"	kind:member	line:52
+has_value	../src/single_linked_list.py	/^    def has_value(self, value):$/;"	kind:member	line:75
+head	../src/single_linked_list.py	/^    def head(self):$/;"	kind:member	line:105
 insert	../src/double_linked_list.py	/^    def insert(self, value):$/;"	kind:member	line:25
-insert	../src/single_linked_list.py	/^    def insert(self, atNode, value):$/;"	kind:member	line:37
-insert_at_end	../src/single_linked_list.py	/^    def insert_at_end(self, value):$/;"	kind:member	line:34
+insert_at_end	../src/single_linked_list.py	/^    def insert_at_end(self, value):$/;"	kind:member	line:36
+insert_at_node	../src/single_linked_list.py	/^    def insert_at_node(self, at_node, value):$/;"	kind:member	line:56
 insert_at_start	../src/single_linked_list.py	/^    def insert_at_start(self, value):$/;"	kind:member	line:24
-remove	../src/single_linked_list.py	/^    def remove(self, value):$/;"	kind:member	line:49
-remove_at_end	../src/single_linked_list.py	/^    def remove_at_end(self):$/;"	kind:member	line:46
-remove_at_start	../src/single_linked_list.py	/^    def remove_at_start(self):$/;"	kind:member	line:43
+remove	../src/single_linked_list.py	/^    def remove(self, value):$/;"	kind:member	line:72
+remove_at_end	../src/single_linked_list.py	/^    def remove_at_end(self):$/;"	kind:member	line:69
+remove_at_start	../src/single_linked_list.py	/^    def remove_at_start(self):$/;"	kind:member	line:66
 setUp	../tests/single_linked_list_test.py	/^    def setUp(self):$/;"	kind:member	line:16
 single_linked_list.py	../src/single_linked_list.py	1;"	kind:file	line:1
 single_linked_list_test.py	../tests/single_linked_list_test.py	1;"	kind:file	line:1
-size	../src/single_linked_list.py	/^    def size(self):$/;"	kind:member	line:71
-test_get_size_after_item_removal_at_start	../tests/single_linked_list_test.py	/^    def test_get_size_after_item_removal_at_start(self):$/;"	kind:member	line:68
-test_get_size_when_list_is_empty	../tests/single_linked_list_test.py	/^    def test_get_size_when_list_is_empty(self):$/;"	kind:member	line:64
-test_has_value	../tests/single_linked_list_test.py	/^    def test_has_value(self):$/;"	kind:member	line:45
-test_has_value_empty_list	../tests/single_linked_list_test.py	/^    def test_has_value_empty_list(self):$/;"	kind:member	line:57
-test_insert	../tests/single_linked_list_test.py	/^    def test_insert(self):$/;"	kind:member	line:29
-test_insert_at_end	../tests/single_linked_list_test.py	/^    def test_insert_at_end(self):$/;"	kind:member	line:25
+size	../src/single_linked_list.py	/^    def size(self):$/;"	kind:member	line:100
+test_get_size_after_item_removal_at_start	../tests/single_linked_list_test.py	/^    def test_get_size_after_item_removal_at_start(self):$/;"	kind:member	line:91
+test_get_size_when_list_is_empty	../tests/single_linked_list_test.py	/^    def test_get_size_when_list_is_empty(self):$/;"	kind:member	line:87
+test_has_value	../tests/single_linked_list_test.py	/^    def test_has_value(self):$/;"	kind:member	line:70
+test_has_value_empty_list	../tests/single_linked_list_test.py	/^    def test_has_value_empty_list(self):$/;"	kind:member	line:80
+test_insert_at_end_by_inserting_multiple_values	../tests/single_linked_list_test.py	/^    def test_insert_at_end_by_inserting_multiple_values(self):$/;"	kind:member	line:44
+test_insert_at_end_when_list_is_empty	../tests/single_linked_list_test.py	/^    def test_insert_at_end_when_list_is_empty(self):$/;"	kind:member	line:37
+test_insert_at_node	../tests/single_linked_list_test.py	/^    def test_insert_at_node(self):$/;"	kind:member	line:54
 test_insert_at_start	../tests/single_linked_list_test.py	/^    def test_insert_at_start(self):$/;"	kind:member	line:20
-test_remove	../tests/single_linked_list_test.py	/^    def test_remove(self):$/;"	kind:member	line:41
-test_remove_at_end	../tests/single_linked_list_test.py	/^    def test_remove_at_end(self):$/;"	kind:member	line:37
-test_remove_at_start	../tests/single_linked_list_test.py	/^    def test_remove_at_start(self):$/;"	kind:member	line:33
-test_to_array	../tests/single_linked_list_test.py	/^    def test_to_array(self):$/;"	kind:member	line:60
-to_array	../src/single_linked_list.py	/^    def to_array(self):$/;"	kind:member	line:67
-traverse_list	../src/single_linked_list.py	/^    def traverse_list(self):$/;"	kind:member	line:40
+test_insert_at_start_for_multiple_values	../tests/single_linked_list_test.py	/^    def test_insert_at_start_for_multiple_values(self):$/;"	kind:member	line:27
+test_remove	../tests/single_linked_list_test.py	/^    def test_remove(self):$/;"	kind:member	line:66
+test_remove_at_end	../tests/single_linked_list_test.py	/^    def test_remove_at_end(self):$/;"	kind:member	line:62
+test_remove_at_start	../tests/single_linked_list_test.py	/^    def test_remove_at_start(self):$/;"	kind:member	line:58
+test_to_array	../tests/single_linked_list_test.py	/^    def test_to_array(self):$/;"	kind:member	line:83
+to_array	../src/single_linked_list.py	/^    def to_array(self):$/;"	kind:member	line:90
+traverse_list	../src/single_linked_list.py	/^    def traverse_list(self):$/;"	kind:member	line:59
 unittest	../tests/single_linked_list_test.py	/^import unittest$/;"	kind:namespace	line:10

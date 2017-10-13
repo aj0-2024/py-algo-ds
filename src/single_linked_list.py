@@ -23,37 +23,52 @@ class SingleLinkedList:
 
     def insert_at_start(self, value):
         """Insert value into the head of the linked list"""
+        new_node = None
         if self._head is None:
             new_node = Node(value, None)
             self._head = new_node
         else:
             new_node = Node(value, self._head)
             self._head = new_node
-            self._size += 1
-        return self._size
+        self._size += 1
+        return new_node
 
     def insert_at_end(self, value):
         """Insert value into the tail of the linked list"""
         curr = self._head
+        new_tail = None
 
         # if empty add as first element
         if self._head is None:
-            tail = Node(value, None)
-            self._head = tail
+            new_tail = Node(value, None)
+            self._head = new_tail
+            self._size += 1
         else:
-            # traverse till the tail
+            # traverse till the new_tail
             while curr.next is not None:
                 curr = curr.next
-            # set the new tails
-            tail = Node(value, None)
-            curr.next = tail
-        return self._size
+            # set the new new_tails
+            new_tail = Node(value, None)
+            curr.next = new_tail
+            self._size += 1
+        return new_tail
 
-    def insert(self, atNode, value):
+    def insert_at_node(self, at_node, value):
         """Insert value at node"""
+        if isinstance(at_node, Node):
+            new_node = Node(value, at_node.next)
+            at_node.next = new_node
+            self._size += 1
+            return new_node
+        else:
+            raise TypeError('Expecting a Node instance')
 
     def traverse_list(self):
         """Traverse and print out the values in the list"""
+        curr = self._head
+        while curr is not None:
+            print(curr.val)
+            curr = curr.next
 
     def remove_at_start(self):
         """remove the first node and return it"""
@@ -70,14 +85,14 @@ class SingleLinkedList:
             return False
         else:
             curr = self._head
-            found = False
+            is_found = False
             while curr is not None:
                 if curr.val == value:
-                    found = True
+                    is_found = True
                     break
                 else:
                     curr = curr.next
-            return found
+            return is_found
 
     def to_array(self):
         """Convert the linked list into an array"""

@@ -1,4 +1,6 @@
 {
-  "python.pythonPath": "/usr/local/bin/python3.6",
-  "editor.tabSize": 4
+  "python.pythonPath": "/venv/bin/python3",
+  "editor.tabSize": 4,
+  "python.linting.pylintEnabled": false,
+  "python.formatting.provider": "yapf"
 }

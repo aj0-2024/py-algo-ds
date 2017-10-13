@@ -4,7 +4,7 @@
     1. Cover all the edge cases (!important)
 
     Edge Cases:
-    1. removing items from an empty list
+    1. removing ite ms from an empty list
 """
 
 import unittest
@@ -19,21 +19,25 @@ class TestSingleLinkedList(unittest.TestCase):
 
     def test_insert_at_start(self):
         """Test the insert at start for normal and edge cases"""
-        self._list.insert_at_start(1)
+        new_node = self._list.insert_at_start(1)
+        self.assertIsNotNone(new_node)
         self.assertEqual(self._list.size, 1)
-        self.assertEqual(self._list.head, 1)
+        self.assertEqual(self._list.head.val, 1)
 
     def test_insert_at_start_for_multiple_values(self):
         """Insert multiple values and test the order"""
+        self._list.insert_at_start(1)
+        self._list.insert_at_start(1)
         self._list.insert_at_start(2)
         self._list.insert_at_start(3)
-        self._list.insert_at_start(4)
         self._list.insert_at_start(5)
-        self.assertListEqual(self._list.to_array(), [5, 4, 3, 2, 1])
+        self.assertEqual(self._list.size, 5)
+        self.assertListEqual(self._list.to_array(), [5, 3, 2, 2, 1])
         
     def test_insert_at_end_when_list_is_empty(self):
         """Test insert a value at the end"""
-        self._list.insert_at_end(2)
+        new_node = self._list.insert_at_end(2)
+        self.assertIsNotNone(new_node)        
         self.assertEqual(self._list.size, 1)
         self.assertEqual(self._list.head, 2)
 
@@ -44,11 +48,15 @@ class TestSingleLinkedList(unittest.TestCase):
         self._list.insert_at_end(2)
         self._list.insert_at_end(3)
         self._list.insert_at_end(5)
+        self.assertEqual(self._list.size, 5)
         self.assertListEqual(self._list.to_array(), [1, 1, 2, 3, 5])
 
-    def test_insert(self):
-        """"""
-        self.assertEqual(True, False)
+    def test_insert_at_node(self):
+        """Insert node into a linked list by storing a reference to prev node"""
+        node = self._list.insert_at_start(1)
+        new_node = self._list.insert_at_node(node, 2)
+        self.assertEqual(self._list.size, 2)
+        self.assertListEqual(self._list.to_array(), [1, 2])
 
     def test_remove_at_start(self):
         """"""
