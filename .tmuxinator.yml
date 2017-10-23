@@ -1,0 +1,12 @@
+name: Py-algo-ds
+root: ~/learn/python/algo_ds_python
+
+windows:
+  - development:
+      layout: even-horizontal
+      panes:
+        - vim src/
+        - vim tests/
+
+  - testing:
+        - source venv/bin/activate.fish
