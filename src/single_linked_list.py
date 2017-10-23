@@ -73,6 +73,7 @@ class SingleLinkedList:
     def remove_at_start(self):
         """remove the first node and return it"""
 
+
     def remove_at_end(self):
         """Traverse list and remove the tail node and return it"""
 
@@ -100,14 +101,14 @@ class SingleLinkedList:
         output_arr = []
         while curr is not None:
             output_arr.append(curr.val)
-            curr = curr.next            
+            curr = curr.next
         return output_arr
 
     @property
     def size(self):
         """Get the size of the linked list"""
         return self._size
-    
+
     @property
     def head(self):
         """Get the head element of the list"""

@@ -5,8 +5,8 @@ windows:
   - development:
       layout: even-horizontal
       panes:
-        - vim src/
-        - vim tests/
+        - vim 
+        - vim 
 
   - testing:
         - source venv/bin/activate.fish
