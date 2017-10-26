@@ -69,19 +69,32 @@ class TestSingleLinkedList(unittest.TestCase):
 
         removed_node = self._list.remove_at_start()
         self.assertEqual(removed_node.val, 1)
-        self.assertListEqual(self._list.to_array(), [2, 3, 4])
+        self.assertListEqual(self._list.to_array(), [2, 3, 5])
 
         removed_node_2 = self._list.remove_at_start()
-        self.assertEqual(remove_node_2.val, 2)
-        self.assertListEqual(self._list.to_arry(), [3, 4])
+        self.assertEqual(removed_node_2.val, 2)
+        self.assertListEqual(self._list.to_array(), [3, 5])
 
     def test_remove_at_end(self):
         """"""
-        self.assertEqual(True, False)
+        self._list.insert_at_start(3)
+        self._list.insert_at_start(2)
+        self._list.insert_at_start(1)
+
+        val = self._list.remove_at_end()
+        self.assertEqual(val, 3)
+        self.assertListEqual(self._list.to_array(), [1, 2])
 
     def test_remove(self):
-        """"""
-        self.assertEqual(True, False)
+        """Test if the value is removed"""
+        self._list.insert_at_start(1)
+        self._list.insert_at_start(1)
+        node = self._list.insert_at_start(2)
+
+        self._list.remove(2)
+        self.assertEqual(self._list.size, 2)
+        self.assertEqual(self._list.has_value(2), False)
+
 
     def test_has_value(self):
         """"""
@@ -98,7 +111,11 @@ class TestSingleLinkedList(unittest.TestCase):
 
     def test_to_array(self):
         """"""
-        self.assertEqual(True, False)
+        self._list.insert_at_start(1)
+        self._list.insert_at_start(2)
+        self._list.insert_at_start(3)
+
+        self.assertListEqual(self._list.to_array(), [3,2,1])
 
     def test_get_size_when_list_is_empty(self):
         """Size should be zero when list is empty"""
