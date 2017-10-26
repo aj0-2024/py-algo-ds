@@ -8,6 +8,7 @@ code coverage:
 import bolt
 
 bolt.register_task('coverage', ['shell.coverage'])
+bolt.register_task('test', ['shell.test'])
 
 config = {
     'shell': {
@@ -18,6 +19,12 @@ config = {
                 'term-missing',
                 '--cov=src/',
                 'tests/'
+            ]
+        },
+        'test' : {
+            'command': 'py.test',
+            'arguments': [
+                '-x'
             ]
         }
     }

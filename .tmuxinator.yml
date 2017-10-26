@@ -9,3 +9,4 @@ windows:
         - vim 
 
   - testing: source venv/bin/activate.fish
+  - ci: git s
