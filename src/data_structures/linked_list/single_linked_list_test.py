@@ -8,7 +8,7 @@
 """
 
 import unittest
-from src.single_linked_list import SingleLinkedList
+from src.data_structures.single_linked_list import SingleLinkedList
 
 
 class TestSingleLinkedList(unittest.TestCase):
