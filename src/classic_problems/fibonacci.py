@@ -16,7 +16,7 @@ class NegativeNumberError(Exception):
 
 
 def fib_recursion(n: int) -> int:
-    """Calculatin fib using plain recursion"""
+    """Calculating fib using plain recursion"""
 
     # base case
     if n in {0, 1}:
