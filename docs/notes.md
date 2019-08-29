@@ -13,6 +13,7 @@
       - [Dijkstra's Algorithm](#dijkstras-algorithm)
         - [Algorithm](#algorithm-1)
         - [Notes](#notes)
+    - [Feynman Algorithm](#feynman-algorithm)
   - [Classic Problems](#classic-problems)
 
 ## Data structures
@@ -102,6 +103,14 @@ weights
 
 - Cannot use Dijkstra's algorithm if there are negative-weight edges ( Use Bellman-Ford Algorithm )
 - Use the cheapest node on the graph and figure out how long it takes to get to nodes from there
+
+---
+
+### Feynman Algorithm
+
+1. Write down the problem
+2. Think read hard
+3. Write down the solution
 
 ---
 
