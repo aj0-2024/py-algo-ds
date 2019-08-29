@@ -1,21 +1,3 @@
-# py-algo-ds
-Implementation of Algorithms &amp; Data Structures in python (For learning)
+# Py-Algo-DS
 
-**Linear Data Structures**
-1. Singly Linked List
-2. Doubly Linked List
-3. Stack
-4. Queue
-5. Priority Queue
-
-
-**Classic Problems**
-1. Towers of Hanoi (Recursion)
-
-
-**Methods & Techniques**
-1. Recursion
-2. Memoization
-3. Compression
-4. Bit manipulation
-
+Welcome ! This repository contains notes & implementations of various data structures & algorithms. The intension here is to learn and not for any other use.
