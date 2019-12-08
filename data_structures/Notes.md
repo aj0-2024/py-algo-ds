@@ -19,3 +19,7 @@
 1. Insertions and deletions in the middle of the array is expensive
 2. Requires more memory compared to arrays
 
+## TODO
+
+1. Use Iterator patterns to loop through the linked list
+    - Raise an exception when loop exists (Important)

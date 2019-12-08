@@ -47,6 +47,10 @@ class SinglyLinkedList:
         print_arr.append('tail')
         return ' -> '.join(print_arr)
 
+    def size(self):
+        """TODO: Return the size of the linked list"""
+        pass
+
     def append(self, value):
         """O(n) method as it requires us to touch all nodes in the list"""
         if self.__head is None:
@@ -87,6 +91,11 @@ class SinglyLinkedList:
                     pass
                 curr_node = next_node
                 next_node = next_node.next
+
+    def insert(self):
+        """TODO: Insert at any arbitraty location"""
+        pass
+
 
 def create_linked_list():
     """Factory function to create a linked list"""
