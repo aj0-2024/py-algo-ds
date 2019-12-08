@@ -1,73 +1,107 @@
+"""Implementation of a linked list
+watch https://www.youtube.com/watch?v=njTh_OwMljA
+"""
+
 class Node:
+    """Node holds a value and pointer to next node"""
 
     def __init__(self, value, next_node):
-        """Value can be anything - str, char, number etc. Next node can be instance of a node or Null"""
+        """Value can be anything - str, char, number etc.
+        Next node can be instance of a node or Null"""
         self.__value = value
         self.__next = next_node
 
     @property
-    def next():
+    def next(self):
+        """Returns the next node"""
         return self.__next
 
     @property
-    def value():
+    def value(self):
+        """Returns the value of the current node"""
         return self.__value
-    
-    def set_next(node):
+
+    def set_next(self, node):
+        """Set the next node"""
         self.__next = node
 
 def create_node(value, next_node):
     """Factory function to create a node with a value"""
-    if isinstance(next_node, Node) or next_node == None:
+    if isinstance(next_node, Node) or next_node is None:
         return Node(value, next_node)
     else:
         raise Exception('Next node has to be instance of class Node')
 
-class LinkedList:
+class SinglyLinkedList:
+    """Singly linked list maintains a pointer to the next node"""
 
     def __init__(self):
         self.__head = None
 
+    def __str__(self):
+        curr_node = self.__head
+        print_arr = ['head']
+        while curr_node != None:
+            print_arr.append(str(curr_node.value))
+            curr_node = curr_node.next
+        print_arr.append('tail')
+        return ' -> '.join(print_arr)
+
     def append(self, value):
         """O(n) method as it requires us to touch all nodes in the list"""
-        if (self.__head == None):
+        if self.__head is None:
             self.__head = create_node(value, None)
         else:
             curr_node = self.__head
             # loop until you reach the end
-            while(curr_node != None):
+            while curr_node != None and curr_node.next != None:
                 curr_node = curr_node.next
-            curr_node.next = create_node(value, None)
-            
+            curr_node.set_next(create_node(value, None))
 
     def prepend(self, value):
         """Prepend is very fast"""
-        if (self.__head == None):
+        if self.__head is None:
             self.__head = create_node(value, None)
         else:
-            new_node = create_note(value, self.__head)
+            new_node = create_node(value, self.__head)
             self.__head = new_node
 
     def remove_values(self, value):
         """Be careful when removing head node"""
-        if (self.__head == None):
+        if self.__head is None:
             return
         else:
             # head is valid node so continue
-            
-        if (self.__head.value == value):
+            pass
+
+        if self.__head.value == value:
             self.__head = self.__head.next
         else:
             curr_node = self.__head
             next_node = self.__head.next
-            while(next_node != None):
-                if (next_node.value == value):
-                    curr_node.next = next_node.next
+            while next_node != None:
+                if next_node.value == value:
+                    curr_node.set_next(next_node.next)
                 else:
                     # not the intended node
+                    pass
                 curr_node = next_node
                 next_node = next_node.next
-            
-            
-                
-            
+
+def create_linked_list():
+    """Factory function to create a linked list"""
+    return SinglyLinkedList()
+
+def test_linked_list():
+    """Simple linked list test"""
+    linked_list = create_linked_list()
+    linked_list.append(2)
+    linked_list.prepend(1)
+    linked_list.append(3)
+    linked_list.append(4)
+    linked_list.remove_values(4)
+    print(linked_list)
+
+
+if __name__ == "__main__":
+    test_linked_list()
