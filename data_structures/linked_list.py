@@ -1,5 +1,8 @@
 """Implementation of a linked list
 watch https://www.youtube.com/watch?v=njTh_OwMljA
+
+TODO:
+    1. Check for loop within the list
 """
 
 class Node:
