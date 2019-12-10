@@ -7,6 +7,7 @@
 3. Duplicates may exist
 4. The list has an order starting from head and ends at tail
 5. Values are not accessible by index
+6. ***Be careful*** with loops within the LinkedList
 
 ## Advantages
 
@@ -18,8 +19,23 @@
 
 1. Insertions and deletions in the middle of the array is expensive
 2. Requires more memory compared to arrays
+3. Not cahce optmized
 
-## TODO
+# Stack
 
-1. Use Iterator patterns to loop through the linked list
-    - Raise an exception when loop exists (Important)
+## General Notes
+
+1. LIFO structure
+2. Always be careful and check for loops when implemented with a linked list
+3. No limit on the size since implementation uses linked list
+
+## Advantages
+
+1. O(1) push
+2. O(1) pop
+
+## Disadvantages
+
+1. Not accessible by index
+2. Not cache optimized (when implemented with linked list)
+

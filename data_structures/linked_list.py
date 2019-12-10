@@ -2,7 +2,8 @@
 watch https://www.youtube.com/watch?v=njTh_OwMljA
 
 TODO:
-    1. Check for loop within the list
+1. Use Iterator patterns to loop through the linked list
+    - Raise an exception when loop exists (Important)
 """
 
 class Node:
