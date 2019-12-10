@@ -39,3 +39,18 @@
 1. Not accessible by index
 2. Not cache optimized (when implemented with linked list)
 
+# Queue
+
+## General Notes
+
+1. FIFO structure
+2. Always be careful and check for loops when implemented with a linked list
+
+## Advantages
+
+1. O(1) enqueue
+2. O(1) dequeue
+
+## Disadvantages
+
+1. Not cache optimized (when implemented with linked list)
