@@ -1,4 +1,5 @@
 """Adjacency list is a graph representation using array or a hash map"""
+from collections import deque
 
 class AdjacencyListGraph:
     """Graph representation using dictionary"""
@@ -26,7 +27,7 @@ class AdjacencyListGraph:
 
     def depth_first_search_path(self, source, destination, visited=None):
         """Looks for a path from source - destination"""
-        print(source, destination)
+        print(source, visited)
 
         if visited is None:
             visited = set()
@@ -58,7 +59,39 @@ class AdjacencyListGraph:
 
     def breadth_first_search(self, source, destination):
         """Do a breadth first search - queue & set"""
-        pass
+
+        visited = set()
+
+        # source and destination must be valid vertices in the graph
+        if source not in self.__nodes or destination not in self.__nodes:
+            return False
+
+        # create a queue and add source to it
+        queue = deque()
+        queue.appendleft(source)
+        
+        while len(queue) != 0:
+            vertex = queue.pop()
+
+            print(vertex, visited)
+
+            if vertex == destination:
+                return True
+            
+            # if the vertex is already visited, nothing to do
+            if vertex in visited:
+                continue
+            
+            # add to visited set
+            visited.add(vertex)
+
+            # at the end add all of the adj vertices to the queue
+            for adj_vertex in self.__nodes[vertex]:
+                queue.appendleft(adj_vertex)
+
+        return False 
+
+        
 
 def create_graph():
     """Create and insert vertices and paths"""
@@ -86,10 +119,16 @@ def test_dfs():
     graph = create_graph()
     print(graph.depth_first_search_path(0, 3))
     
+def test_bfs():
+    """Breadth first search a path"""
+    graph = create_graph()
+    print(graph.breadth_first_search(0, 3))
+    print(graph.breadth_first_search(1, 3))
 
 if __name__ == '__main__':
     test_adjacency_list_graph()
     test_dfs()
+    test_bfs()
 
     
 
