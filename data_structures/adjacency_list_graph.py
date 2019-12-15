@@ -24,24 +24,72 @@ class AdjacencyListGraph:
         else:
             raise Exception('vertexes are not found')
 
+    def depth_first_search_path(self, source, destination, visited=None):
+        """Looks for a path from source - destination"""
+        print(source, destination)
+
+        if visited is None:
+            visited = set()
+
+        # the source and destination must be vertices in the graph
+        if source not in self.__nodes or destination not in self.__nodes:
+            return False
+
+        # if we looked through the source already
+        # then the path does not exist
+        if source in visited:
+            return False
+
+        # add to the visited list
+        visited.add(source)
+
+        # if the source and destination are equal then we found a path
+        if source == destination:
+            return True
+
+        # ask the adj vertices to see if the path exists
+        for adj_vertex in self.__nodes[source]:
+            if self.depth_first_search_path(adj_vertex, destination, visited):
+                return True
+
+        # if the adj list is exausted then return False as path does not exist
+        return False
+
+
+    def breadth_first_search(self, source, destination):
+        """Do a breadth first search - queue & set"""
+        pass
+
+def create_graph():
+    """Create and insert vertices and paths"""
+    graph = AdjacencyListGraph()
+
+    graph.insert_vertex(0)
+    graph.insert_vertex(1)
+    graph.insert_vertex(2)
+    graph.insert_vertex(3)
+
+    graph.insert_edge(0, 1)
+    graph.insert_edge(1, 2)
+    graph.insert_edge(1, 3)
+    graph.insert_edge(2, 3)
+
+    return graph
+
 def test_adjacency_list_graph():
     """Simple test for the graph implementation"""
-    tree = AdjacencyListGraph()
+    graph = create_graph()
+    print(graph)
 
-    tree.insert_vertex(0)
-    tree.insert_vertex(1)
-    tree.insert_vertex(2)
-    tree.insert_vertex(3)
-
-    tree.insert_edge(0, 1)
-    tree.insert_edge(1, 2)
-    tree.insert_edge(1, 3)
-    tree.insert_edge(2, 3)
-
-    print(tree)
+def test_dfs():
+    """Depth first search a path"""
+    graph = create_graph()
+    print(graph.depth_first_search_path(0, 3))
+    
 
 if __name__ == '__main__':
     test_adjacency_list_graph()
+    test_dfs()
 
     
 
