@@ -94,4 +94,4 @@ def test_tree_traversal():
     return tree
 
 if __name__ == '__main__':
-    tree = test_tree_traversal()
+    test_tree_traversal()
