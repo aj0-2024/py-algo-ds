@@ -73,7 +73,7 @@ class AdjacencyListGraph:
         while len(queue) != 0:
             vertex = queue.pop()
 
-            print(vertex, visited)
+            print(vertex, queue, visited)
 
             if vertex == destination:
                 return True
@@ -123,7 +123,6 @@ def test_bfs():
     """Breadth first search a path"""
     graph = create_graph()
     print(graph.breadth_first_search(0, 3))
-    print(graph.breadth_first_search(1, 3))
 
 if __name__ == '__main__':
     test_adjacency_list_graph()
