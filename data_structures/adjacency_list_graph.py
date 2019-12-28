@@ -1,6 +1,7 @@
 """Adjacency list is a graph representation using array or a hash map"""
 from collections import deque
 
+
 class AdjacencyListGraph:
     """Graph representation using dictionary"""
 
@@ -53,9 +54,8 @@ class AdjacencyListGraph:
             if self.depth_first_search_path(adj_vertex, destination, visited):
                 return True
 
-        # if the adj list is exausted then return False as path does not exist
+        # if the adj list is exhausted then return False as path does not exist
         return False
-
 
     def breadth_first_search(self, source, destination):
         """Do a breadth first search - queue & set"""
@@ -69,7 +69,7 @@ class AdjacencyListGraph:
         # create a queue and add source to it
         queue = deque()
         queue.appendleft(source)
-        
+
         while len(queue) != 0:
             vertex = queue.pop()
 
@@ -77,11 +77,11 @@ class AdjacencyListGraph:
 
             if vertex == destination:
                 return True
-            
+
             # if the vertex is already visited, nothing to do
             if vertex in visited:
                 continue
-            
+
             # add to visited set
             visited.add(vertex)
 
@@ -89,9 +89,8 @@ class AdjacencyListGraph:
             for adj_vertex in self.__nodes[vertex]:
                 queue.appendleft(adj_vertex)
 
-        return False 
+        return False
 
-        
 
 def create_graph():
     """Create and insert vertices and paths"""
@@ -109,31 +108,26 @@ def create_graph():
 
     return graph
 
+
 def test_adjacency_list_graph():
     """Simple test for the graph implementation"""
     graph = create_graph()
     print(graph)
 
+
 def test_dfs():
     """Depth first search a path"""
     graph = create_graph()
     print(graph.depth_first_search_path(0, 3))
-    
+
+
 def test_bfs():
     """Breadth first search a path"""
     graph = create_graph()
     print(graph.breadth_first_search(0, 3))
 
+
 if __name__ == '__main__':
     test_adjacency_list_graph()
     test_dfs()
     test_bfs()
-
-    
-
-
-        
-
-    
-
-    
