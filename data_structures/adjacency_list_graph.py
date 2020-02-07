@@ -70,10 +70,8 @@ class AdjacencyListGraph:
         queue = deque()
         queue.appendleft(source)
 
-        while len(queue) != 0:
+        while len(queue):
             vertex = queue.pop()
-
-            print(vertex, queue, visited)
 
             if vertex == destination:
                 return True
