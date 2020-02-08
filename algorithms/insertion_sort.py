@@ -9,13 +9,14 @@ def insertion_sort(input_data):
     """Implementation of the insertion sort algorithm to sort data. The sorting is done in-place so
     be careful."""
 
-    for outer_index in range(0, len(input_data)):
+    for curr_sorted_index in range(0, len(input_data)):
 
-        # be careful here with inner_index as we access prev index (-1)
-        # do not go out of bounds
-        for inner_index in range(outer_index, 0, -1):
+        # we maintain a sorted region and unsorted region within the data
+        # starting from 0 to curr_sorted_index - sorted area
+        for inner_index in range(curr_sorted_index, 0, -1):
             inner_element = input_data[inner_index]
 
+            # NOTE - be careful here with inner_index as we access prev index (-1)
             prev_inner_index = inner_index - 1
             prev_inner_element = input_data[prev_inner_index]
 
