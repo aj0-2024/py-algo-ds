@@ -161,32 +161,11 @@ class DoublyLinkedList(object):
         return False
 
 
-def expect_empty(self, linked_list):
-    self.assertEqual(linked_list._head, None)
-    self.assertEqual(linked_list._tail, None)
-
-
-def expect_head_tail(self, linked_list, head, tail):
-    self.assertEqual(linked_list._head, head)
-    self.assertEqual(linked_list._tail, tail)
-
-
-def expect_single_node(self, linked_list, node):
-    self.assertEqual(linked_list._head, node)
-    self.assertEqual(linked_list._tail, node)
-
-
-def remove_nodes(linked_list, nodes):
-    for node in nodes:
-        linked_list.remove(node)
-
-
 class TestDoublyLinkedList(unittest.TestCase):
 
     def setUp(self):
         self.list = DoublyLinkedList()
 
-    @unittest.skip("skip")
     def test_set_head(self):
         node = Node(1)
         self.list.set_head(node)
@@ -194,7 +173,6 @@ class TestDoublyLinkedList(unittest.TestCase):
         self.assertEqual(self.list._tail, node)
         print(self.list)
 
-    @unittest.skip("skip")
     def test_set_tail(self):
         node = Node(1)
         self.list.set_tail(node)
@@ -202,29 +180,23 @@ class TestDoublyLinkedList(unittest.TestCase):
         self.assertEqual(self.list._tail, node)
         print(self.list)
 
-    @unittest.skip("skip")
     def test_insert_at(self):
         node = Node(1)
         self.list.insert_at_position(2, node)
         self.assertEqual(self.list._head, node)
         print(self.list)
 
-    @unittest.skip("skip")
     def test_insert_after(self):
         first = Node(1)
         second = Node(2)
         self.list.set_head(first)
         self.list.insert_after(first, second)
-        expect_head_tail(self, self.list, first, second)
 
-    @unittest.skip("skip")
     def test_remove(self):
         node = Node(1)
         self.list.set_head(node)
         self.list.remove(node)
-        expect_empty(self, self.list)
 
-    @unittest.skip("skip")
     def test_list_contains(self):
         node_1 = Node(1)
         node_2 = Node(2)
@@ -232,8 +204,6 @@ class TestDoublyLinkedList(unittest.TestCase):
         self.list.set_head(node_1)
         self.list.insert_after(self.list._tail, node_2)
         self.list.insert_after(self.list._tail, node_3)
-        print(self.list)
-
         self.assertTrue(self.list.contains(3))
 
 
