@@ -1,5 +1,8 @@
 """
-Bubble sort is a basic sorting algorithm that sorts elements of a list in-place
+Bubble sort is a basic sorting algorithm that sorts elements of a list in-place.
+
+Name is synonymous to how it works, imagine a bubble (representing the swapping) goes from left to
+right. No more bubbles? swapping is done.
 
 1. Track the sorting status with a boolean
 2. While the list is not sorted, start from first index and keep swapping elements not in order
