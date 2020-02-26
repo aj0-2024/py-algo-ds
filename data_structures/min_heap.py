@@ -80,7 +80,6 @@ class MinHeap(object):
             parent_index = child_index_to_swap
             child_one_index = self._get_child_one_index(parent_index)
 
-
     def _swap(self, index_i, index_j):
         self._heap[index_i], self._heap[index_j] =\
                 self._heap[index_j], self._heap[index_i]
@@ -114,11 +113,10 @@ class TestMinHeap(unittest.TestCase):
 
     def test_build_heap(self):
         array = [2, 3, 1]
-        clone = copy.copy(array)
-        heapify(clone)
         heap = MinHeap(array)
+        heapify(array)
 
-        self.assertEqual(heap.get_heap(), clone)
+        self.assertEqual(heap.get_heap(), array)
 
 if __name__ == "__main__":
     unittest.main()
