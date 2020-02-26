@@ -2,96 +2,176 @@
 A binary search tree is a tree where every node has 0 to 2 child nodes and follow a
 specific property.
 
-Left <= Root <= Right
+There are different variations of the property. Most of them revolve around the difference in
+Equality sign
+
+Left <= Root <= Right (or)
+Left < Root < Right (or)
+Left < Root <= Right (or)
+Left <= Root < Right
+
+BST ADT
+
+1. __contains__
+2. closest_value
+3. insert
+4. remove
+5. _balance
 
 """
+import unittest
 
-class TreeNode:
-    """Tree implementation"""
+
+class Node:
+    """Node within a binary tree"""
 
     def __init__(self, value):
-        self.__val = value
-        self.__left = None
-        self.__right = None
+        self._value = value
+        self._left = None
+        self._right = None
 
-    def insert(self, val):
-        """Insert a value into the BST"""
 
-        if val <= self.__val:
-            if self.__left is None:
-                self.__left = TreeNode(val)
+class BinarySearchTree(object):
+
+    def __init__(self, value):
+        self._root = Node(value)
+
+    def _get_closest_node(self, value):
+        """Travels to the closest node in the tree, if value is equal it returns the node"""
+        parent_node = None
+        curr_node = self._root
+        while curr_node:
+            parent_node = curr_node
+            if value < curr_node._value:
+                curr_node = curr_node._left
+            elif value > curr_node._value:
+                curr_node = curr_node._right
             else:
-                return self.__left.insert(val)
+                break
+
+        return parent_node
+
+    def __contains__(self, value):
+        """Test to see if the BST contains a given value"""
+        closest_node = self._get_closest_node(value)
+        return closest_node._value == value
+
+    def insert(self, value):
+        """Insert the given value into the BST"""
+        closest_node = self._get_closest_node(value)
+        # two cases
+        # case I - insert in the middle of the tree (ex: root, parent)
+        # case II - insert at leaf node
+        if value < closest_node._value:
+            left_node = closest_node._left
+            closest_node._left = Node(value)
+            closest_node._left._left = left_node
         else:
-            if self.__right is None:
-                self.__right = TreeNode(val)
-            else:
-                return self.__right.insert(val)
+            right_node = closest_node._right
+            closest_node._right = Node(value)
+            closest_node._right._right = right_node
 
-    def contains(self, val) -> bool:
-        """Checks if a value exists within the tree"""
+    def remove(self, value, parent_node=None):
+        """Remove a given value from the tree, removes the first encountered value for repeated values"""
 
-        if val == self.__val:
-            return True
-        elif val < self.__val:
-            if self.__left is not None:
-                return self.__left.contains(val)
+        # traverse to the node
+        curr_node = self._root
+        while curr_node:
+            if value < curr_node._value:
+                parent_node = curr_node
+                curr_node = curr_node._left
+            elif value > curr_node._value:
+                parent_node = curr_node
+                curr_node = curr_node._right
             else:
-                return False
+                break
+
+        # case I - node has both children
+        if curr_node._left and curr_node._right:
+            # get the minimum value from the right sub tree and replace it with current value
+            curr_node.value = curr_node._get_min_value(curr_node._right)
+            # remove the node with min value
+
+        # case II - deleting the root node
+        elif not parent_node:
+            # try to replace with left first
+            # replace with right if left not available
+            # both are not available? - its an edge case
+            pass
+
+        # case III - deleting nodes with only one left child
+        elif parent_node._left == curr_node:
+            pass
+
+        # case IV - deleting nodes with only one right child
+        elif parent_node._right == curr_node:
+            pass
+
+    def get_min_value(self, start_node=None):
+
+        curr_node = start_node if start_node else self._root
+
+        if not curr_node._left:
+            return curr_node._value
         else:
-            if self.__right is not None:
-                return self.__right.contains(val)
-            else:
-                return False
+            return self._get_min_value(curr_node._left)
 
-    def print_in_order(self):
-        """In order traveral is natural for BST. Left -> Node -> Right"""
-        if self.__left is not None:
-            self.__left.print_in_order()
-        print('{0}'.format(self.__val), end="->")
-        if self.__right is not None:
-            self.__right.print_in_order()
+    def in_order_traversal(self, node=None):
+        """Returns a list with nodes traversed in-order: left, root, right"""
 
-    def print_pre_order(self):
-        """Pre order traversal Node -> Left -> Right"""
-        print('{0}'.format(self.__val), end="->")
-        if self.__left is not None:
-            self.__left.print_pre_order()
-        if self.__right is not None:
-            self.__right.print_pre_order()
+        if not node:
+            node = self._root
 
-    def print_post_order(self):
-        """Post order traversal Left -> Right -> Node"""
-        if self.__left is not None:
-            self.__left.print_post_order()
-        if self.__right is not None:
-            self.__right.print_post_order()
-        print('{0}'.format(self.__val), end="->")
+        if node._left:
+            self.in_order_traversal(node._left)
+        print(node._value)
+        if node._right:
+            self.in_order_traversal(node._right)
+
+    def pre_order_traversal(self, node=None):
+        """Returns a list with nodes traversed pre-order: root, left, right"""
+
+        if not node:
+            node = self._root
+
+        print(node._value)
+        if node._left:
+            self.in_order_traversal(node._left)
+        if node._right:
+            self.in_order_traversal(node._right)
+
+    def post_order_traversal(self, node=None):
+        """Returns a list with nodes traversed post-order: left, right, root"""
+
+        if not node:
+            node = self._root
+
+        if node._left:
+            self.in_order_traversal(node._left)
+        if node._right:
+            self.in_order_traversal(node._right)
+        print(node._value)
+
+
+class TestBinarySearchTree:
+
+    def setUp(self):
+        tree = TreeNode(5)
+        tree.insert(1)
+        tree.insert(10)
+        tree.insert(3)
+        tree.insert(2)
+        tree.insert(7)
+        tree.insert(8)
+        tree.insert(4)
+        tree.insert(9)
+        tree.insert(6)
+        self.tree = tree
+
 
 def test_tree_traversal():
     """Test the tree implementation for simple cases"""
 
-    tree = TreeNode(5)
-    tree.insert(1)
-    tree.insert(10)
-    tree.insert(3)
-    tree.insert(2)
-    tree.insert(7)
-    tree.insert(8)
-    tree.insert(4)
-    tree.insert(9)
-    tree.insert(6)
-
-    print('--In-Order--')
-    tree.print_in_order()
-    print(' ')
-    print('--Pre-Order--')
-    tree.print_pre_order()
-    print(' ')
-    print('--Post-Order--')
-    tree.print_post_order()
-    print(' ')
-    return tree
 
 if __name__ == '__main__':
-    test_tree_traversal()
+    unittest.main()
