@@ -3,6 +3,9 @@ In simplest terms, algorithms are sequences of steps to solve a given problem
 
 ## Classicification
 1. Greedy algorithms
+2. Dynamic Programming
+    2.1 Memoization
+    2.2 Bottom-up
 
 ## Recursion
 Recursion is a computation concept where a function calls itself until a base case is reached. It can provide an elegant solution to some of the most complex problems in computer science.

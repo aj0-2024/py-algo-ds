@@ -5,6 +5,7 @@ BFS uses a queue in its implementation.
 Notes:
     1. May use more memory than a DFS search since number of nodes in a level is usually more than
     the height.
+    2. Complexity of DFS & BFS is O(N + M) - nodes & edges
 """
 import Queue
 
