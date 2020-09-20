@@ -29,10 +29,10 @@ def bfs(root, target):
         if curr_node._value == target:
             return True
 
-        if curr_node.left and not (curr_node.left in visited):
+        if curr_node.left and curr_node.left not in visited:
             queue_to_process.put(curr_node.left)
 
-        if curr_node.right and not (curr_node.right in visited):
+        if curr_node.right and curr_node.right not in visited:
             queue_to_process.put(curr_node.right)
 
         visited.add(curr_node)
