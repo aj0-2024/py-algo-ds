@@ -21,6 +21,7 @@ def bfs(root, target):
 
     queue_to_process = Queue.queue()
     queue_to_process.put(root)
+    visited = set([root])
 
     while not queue_to_process.empty():
         curr_node = queue_to_process.get()
@@ -28,11 +29,13 @@ def bfs(root, target):
         if curr_node._value == target:
             return True
 
-        if curr_node.left:
+        if curr_node.left and not (curr_node.left in visited):
             queue_to_process.put(curr_node.left)
 
-        if curr_node.right:
+        if curr_node.right and not (curr_node.right in visited):
             queue_to_process.put(curr_node.right)
+
+        visited.add(curr_node)
 
     return False
         
