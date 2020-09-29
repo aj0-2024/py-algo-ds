@@ -4,6 +4,8 @@ Quick sort is a simple algorithm that runs on average O(nlogn)
 2. Elements larger than pivot move to the right of pivot and elements smaller than pivot
 move to the left.
 3. Repeat until the whole array is sorted
+
+https://stackabuse.com/quicksort-in-python/
 """
 
 def partition(sequence, start, end, comparator):
