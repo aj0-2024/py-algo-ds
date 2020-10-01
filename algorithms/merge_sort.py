@@ -2,11 +2,18 @@
 Merge sort is an important sorting algorithm which works by repeatedy diving the input
 and merging them again after sorting the smaller sequences.
 
-O(nlogn)
+Runtime: O(nlogn)
+
+TODO: 
+1. In place sorting version
+2. Iterative version
 """
 
 def merge(seq1, seq2):
     """Merge two sorted arrays into a single array"""
+
+    if not seq1 or not seq2:
+        raise ValueError("Input sequences do not exist or empty")
     
     merged_size = len(seq1) + len(seq2)
     merged_seq = [None] * merged_size
@@ -32,3 +39,19 @@ def merge(seq1, seq2):
             merged_index += 1
 
     return merged_seq
+
+def merge_sort(seq):
+    """Sort the input sequence using merge sort algorithm"""
+
+    if len(seq) <= 1:
+        return seq
+
+    mid = len(seq) // 2
+    left = seq[:mid]
+    right = seq[mid:]
+
+    sorted_seq_1 = merge_sort(left)
+    sorted_seq_2 = merge_sort(right)
+    
+    return merge(sorted_seq_1, sorted_seq_2)
+
