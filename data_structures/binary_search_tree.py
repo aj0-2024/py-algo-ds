@@ -1,23 +1,31 @@
 """
-A binary search tree is a tree where every node has 0 to 2 child nodes and follow a
-specific property.
+Notes:
+    - A binary search tree is a binary tree with a special property
+    - Every node has from 0 to 2 child nodes
+    - BST property is the following
+        - There are different variations of the property. 
+            - Left <= Root <= Right (or)
+            - Left < Root < Right (or)
+            - Left < Root <= Right (or)
+            - Left <= Root < Right
+    - ADT
+        - __contains__
+        - closest_value
+        - insert
+        - remove
+        - _balance
+    - Trees can be imbalanced leading to performance issues.
 
-There are different variations of the property. Most of them revolve around the difference in
-Equality sign
+Applications:
+    - Variations of BST are AVL, Red Black trees are widely used in practice.
+    - Databases
+    - Priority Queue
 
-Left <= Root <= Right (or)
-Left < Root < Right (or)
-Left < Root <= Right (or)
-Left <= Root < Right
+References:
+    - https://en.wikipedia.org/wiki/Binary_search_tree
 
-BST ADT
-
-1. __contains__
-2. closest_value
-3. insert
-4. remove
-5. _balance
-
+TO-DO:
+    - Add more documentation and information
 """
 import unittest
 
