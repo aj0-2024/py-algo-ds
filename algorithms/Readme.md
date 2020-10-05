@@ -12,8 +12,10 @@ Recursion is a computation concept where a function calls itself until a base ca
 
 **Tail end recursion is a better approach**
 
-### Simple Problems
+### TO DO
 - Write a recursive function to get the sum within a list
 - Write a recursive function to count number of items within a list
 - Write a recursive function to find the maximum number in a list
 - Implement Binary search algorithm using recursion
+
+
