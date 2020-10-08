@@ -1,7 +1,8 @@
 """
 Selection sort works by keeping markers for sorted and unsorted regions. 
 
-1. On each iteration select the smallest element from unsorted region and put it in the sorted region.
+1. On each iteration select the smallest element from unsorted region and 
+put it in the sorted region.
 """
 import unittest
 
@@ -13,7 +14,7 @@ def selection_sort(input_data):
         curr_min_at = unsorted_region_start
 
         # find the smallest in unsorted region
-        for curr_unsorted_index in range(unsorted_region_start, len(input_data)):
+        for curr_unsorted_index in range(unsorted_region_start + 1, len(input_data)):
             if input_data[curr_min_at] > input_data[curr_unsorted_index]:
                 curr_min_at = curr_unsorted_index
 
