@@ -7,6 +7,26 @@ Notes:
 Applications:
     - Stock problem where maximum profit has to be calculated. 
 """
+import unittest
+from typing import List 
+
+def brute_force_max_subarray(sequence: List[int], low: int, high: int):
+    """Brute force implementation of the maximum subarray problem"""
+    max_sum = float("-inf")
+    max_left = low
+    max_right = low
+
+    for left_index in range(low, high + 1):
+        curr_sum = 0
+
+        for right_index in range(left_index + 1, high + 1):
+            curr_sum += sequence[right_index]
+            if curr_sum > max_sum:
+                curr_sum = max_sum
+                max_left = left_index
+                max_right = right_index
+
+    return max_sum
 
 def find_max_cross_subarray(sequence: List[int], low: int, mid: int, high: int):
     """Find max with a crossover point at mid"""
@@ -25,6 +45,8 @@ def find_max_cross_subarray(sequence: List[int], low: int, mid: int, high: int):
     # cacluclate the right sum
     right_sum = float("-inf")
     curr_sum = 0
+    # TODO: None check
+    max_right = None
     for right_index in range(mid+1, high):
         curr_sum += sequence[right_index]
         if curr_sum > right_sum:
@@ -56,3 +78,18 @@ def recursive_find_max_subarray(sequence: List[int], low: int, high: int) -> (in
 
 def iterative_find_max_subarray():
     pass
+
+class TestMaxSubarray(unittest.TestCase):
+    
+    def test_max_subarray(self):
+        input = [ 2, 3, 4, -2, -1 ]
+        low, high, output = recursive_find_max_subarray(input, 0, 4)
+
+        print(low, high, output)
+        
+        self.assertEqual(low, 0)
+        self.assertEqual(high, 2)
+        self.assertEqual(ouput, 9)
+
+if __name__ == "__main__":
+    unittest.main()
