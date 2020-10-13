@@ -6,6 +6,9 @@ Notes:
 
 Applications:
     - Stock problem where maximum profit has to be calculated. 
+
+TODO:
+    - The implementations are incomplete.
 """
 import unittest
 from typing import List 
