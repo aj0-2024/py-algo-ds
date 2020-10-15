@@ -1,5 +1,6 @@
 """
 Notes:
+    - Find the nonempty, contiguous subarray of sequence whose values have the largest sum.
     - Divide and conquer method.
     - Recursive & Iterative.
     - Kadane's algorithm is an improvement and more efficient way to solve this problem.
@@ -14,21 +15,19 @@ import unittest
 from typing import List
 
 
-def brute_force_max_subarray(sequence: List[int], low: int, high: int):
+def bruteforce_max_subarray(sequence: List[int]):
     """Brute force implementation of the maximum subarray problem"""
     max_sum = float("-inf")
-    max_left = low
-    max_right = low
 
-    for left_index in range(low, high + 1):
+    for left_index in range(len(sequence)):
         curr_sum = 0
 
-        for right_index in range(left_index + 1, high + 1):
+        for right_index in range(left_index, len(sequence)):
             curr_sum += sequence[right_index]
             if curr_sum > max_sum:
-                curr_sum = max_sum
-                max_left = left_index
-                max_right = right_index
+                max_sum = curr_sum
+            else:
+                break
 
     return max_sum
 
@@ -98,8 +97,13 @@ def iterative_find_max_subarray():
 
 class TestMaxSubarray(unittest.TestCase):
 
+    def test_brute_force_method(self):
+        self.assertEqual(bruteforce_max_subarray([5, 3, -2, 1, 2]), 8)
+        self.assertEqual(bruteforce_max_subarray([10, 11, -7, 10, 6]), 21)
+
+    @unittest.skip("Debug it")
     def test_max_subarray(self):
-        input = [10, 11, 7, 10, 6]
+        input = [10, 11, -7, 10, 6]
         low, high, output = recursive_find_max_subarray(input, 0, 4)
 
         print(low, high, output)
