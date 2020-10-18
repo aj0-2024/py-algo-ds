@@ -32,6 +32,23 @@ def bruteforce_max_subarray(sequence: List[int]):
 
     return max_sum
 
+def kadane_algorithm(sequence: List[int]):
+    
+    if len(sequence) < 2:
+        raise ValueError("Atleast two elements are required")
+    
+    max_sum = sequence[0]
+    curr_sum = sequence[0]
+
+    for curr_index in range(1, len(sequence)):
+        curr_number = sequence[curr_index]
+        curr_sum = max(curr_sum, curr_sum + curr_number)
+        max_sum = max(curr_sum, max_sum)
+
+        print(curr_sum, max_sum)
+
+    return max_sum
+
 
 def find_max_cross_subarray(sequence: List[int], low: int, mid: int, high: int):
     """Find max with a crossover point at mid"""
@@ -103,17 +120,25 @@ def iterative_find_max_subarray():
 
 class TestMaxSubarray(unittest.TestCase):
 
+    @unittest.skip("")
+    def test_all_positive(self):
+        input = [ 10, 11, 21 ]
+        output = 42
+        self.assertEqual(bruteforce_max_subarray(input), output)
+
     def test_with_positive_at_start(self):
         input = [10, 11, -7, 10, 6]
         output = 21
         self.assertEqual(bruteforce_max_subarray(input), output)
-        self.assertEqual(init_recursive_find_max_subarray(input), output)
+        self.assertEqual(kadane_algorithm(input), output)
 
+    @unittest.skip("")
     def test_with_positive_at_middle(self):
         input = [-2, 5, 3, -1, 2]
         output = 8
         self.assertEqual(bruteforce_max_subarray(input), output)
 
+    @unittest.skip("")
     def test_wih_positive_at_end(self):
         input = [-2, -5, -4, -3, 1, 2]
         output = 3
