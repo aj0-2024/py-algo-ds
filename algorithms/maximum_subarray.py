@@ -26,6 +26,7 @@ def bruteforce_max_subarray(sequence: List[int]):
             curr_sum += sequence[right_index]
             if curr_sum > max_sum:
                 max_sum = curr_sum
+                curr_sum = sequence[right_index]
             else:
                 break
 
@@ -98,8 +99,9 @@ def iterative_find_max_subarray():
 class TestMaxSubarray(unittest.TestCase):
 
     def test_brute_force_method(self):
-        self.assertEqual(bruteforce_max_subarray([5, 3, -2, 1, 2]), 8)
+        self.assertEqual(bruteforce_max_subarray([-2, 5, 3, -1, 2]), 8)
         self.assertEqual(bruteforce_max_subarray([10, 11, -7, 10, 6]), 21)
+        self.assertEqual(bruteforce_max_subarray([-2, -5, -4, -3, 1, 2]), 3)
 
     @unittest.skip("Debug it")
     def test_max_subarray(self):
