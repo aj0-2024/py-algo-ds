@@ -33,6 +33,7 @@ def bruteforce_max_subarray(sequence: List[int]):
     return max_sum
 
 def kadane_algorithm(sequence: List[int]):
+    """Greedy algorithm to track max sum so far"""
     
     if len(sequence) < 2:
         raise ValueError("Atleast two elements are required")
