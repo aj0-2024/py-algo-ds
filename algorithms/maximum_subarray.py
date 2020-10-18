@@ -48,6 +48,7 @@ def find_max_cross_subarray(sequence: List[int], low: int, mid: int, high: int):
         print(curr_sum, left_sum)
         if curr_sum > left_sum:
             left_sum = curr_sum
+            curr_sum = sequence[left_index]
             max_left = left_index
 
     # calculate the right sum
@@ -61,6 +62,7 @@ def find_max_cross_subarray(sequence: List[int], low: int, mid: int, high: int):
         curr_sum += sequence[right_index]
         if curr_sum > right_sum:
             right_sum = curr_sum
+            curr_sum = sequence[right_index]
             max_right = right_index
 
     print(max_left, max_right, left_sum + right_sum)
@@ -91,6 +93,9 @@ def recursive_find_max_subarray(sequence: List[int], low: int, high: int) -> (in
     else:
         return (cross_low, cross_high, cross_sum)
 
+def init_recursive_find_max_subarray(sequence: List[int]):
+    low, high, result = recursive_find_max_subarray(sequence, 0, len(sequence) - 1)
+    return result
 
 def iterative_find_max_subarray():
     pass
@@ -98,21 +103,21 @@ def iterative_find_max_subarray():
 
 class TestMaxSubarray(unittest.TestCase):
 
-    def test_brute_force_method(self):
-        self.assertEqual(bruteforce_max_subarray([-2, 5, 3, -1, 2]), 8)
-        self.assertEqual(bruteforce_max_subarray([10, 11, -7, 10, 6]), 21)
-        self.assertEqual(bruteforce_max_subarray([-2, -5, -4, -3, 1, 2]), 3)
-
-    @unittest.skip("Debug it")
-    def test_max_subarray(self):
+    def test_with_positive_at_start(self):
         input = [10, 11, -7, 10, 6]
-        low, high, output = recursive_find_max_subarray(input, 0, 4)
+        output = 21
+        self.assertEqual(bruteforce_max_subarray(input), output)
+        self.assertEqual(init_recursive_find_max_subarray(input), output)
 
-        print(low, high, output)
+    def test_with_positive_at_middle(self):
+        input = [-2, 5, 3, -1, 2]
+        output = 8
+        self.assertEqual(bruteforce_max_subarray(input), output)
 
-        self.assertEqual(low, 2)
-        self.assertEqual(high, 3)
-        self.assertEqual(output, 3)
+    def test_wih_positive_at_end(self):
+        input = [-2, -5, -4, -3, 1, 2]
+        output = 3
+        self.assertEqual(bruteforce_max_subarray(input), output)
 
 
 if __name__ == "__main__":
