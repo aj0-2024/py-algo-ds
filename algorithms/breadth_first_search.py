@@ -7,7 +7,7 @@ Notes:
     the height.
     2. Complexity of DFS & BFS is O(N + M) - nodes & edges
 """
-import Queue
+import queue
 import unittest
 
 class TreeNode(object):
@@ -21,8 +21,11 @@ class TreeNode(object):
 def breadth_first_search(root, target):
     """Check if target exists within the tree"""
 
+    if not root:
+        return False
+
     # BFS algorithm uses a queue to track the nodes to visit next
-    to_visit = Queue.queue()
+    to_visit = queue.Queue()
     to_visit.put(root)
 
     # Visited set is used to skip processed nodes already - useful in graph
@@ -50,7 +53,7 @@ def breadth_first_search(root, target):
 class TestBreadthFirstSearch(unittest.TestCase):
 
     def test_empty_node(self):
-        pass
+        self.assertEqual(breadth_first_search(None, 15), False)
 
     def test_single_node_tree(self):
         pass
@@ -69,3 +72,6 @@ class TestBreadthFirstSearch(unittest.TestCase):
 
     def test_tree_without_target(self):
         pass
+
+if __name__ == "__main__":
+    unittest.main()
