@@ -49,7 +49,7 @@ def breadth_first_search(root, target):
     
 class TestBreadthFirstSearch(unittest.TestCase):
 
-    def setUp(self):
+    def test_empty_node(self):
         pass
 
     def test_single_node_tree(self):
