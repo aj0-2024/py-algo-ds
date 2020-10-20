@@ -20,15 +20,15 @@ def bruteforce_max_subarray(sequence: List[int]):
     max_sum = float("-inf")
 
     for left_index in range(len(sequence)):
-        curr_sum = 0
 
+        curr_sum = 0
         for right_index in range(left_index, len(sequence)):
+            max_sum = max(max_sum, curr_sum)
             curr_sum += sequence[right_index]
-            if curr_sum > max_sum:
-                max_sum = curr_sum
-                curr_sum = sequence[right_index]
-            else:
+
+            if curr_sum < max_sum:
                 break
+
 
     return max_sum
 
@@ -42,11 +42,8 @@ def kadane_algorithm(sequence: List[int]):
     curr_sum = sequence[0]
 
     for curr_index in range(1, len(sequence)):
-        curr_number = sequence[curr_index]
-        curr_sum = max(curr_sum, curr_sum + curr_number)
+        curr_sum = max(curr_sum, curr_sum + sequence[curr_index])
         max_sum = max(curr_sum, max_sum)
-
-        print(curr_sum, max_sum)
 
     return max_sum
 
@@ -121,7 +118,6 @@ def iterative_find_max_subarray():
 
 class TestMaxSubarray(unittest.TestCase):
 
-    @unittest.skip("")
     def test_all_positive(self):
         input = [ 10, 11, 21 ]
         output = 42
@@ -131,15 +127,13 @@ class TestMaxSubarray(unittest.TestCase):
         input = [10, 11, -7, 10, 6]
         output = 21
         self.assertEqual(bruteforce_max_subarray(input), output)
-        self.assertEqual(kadane_algorithm(input), output)
 
-    @unittest.skip("")
     def test_with_positive_at_middle(self):
         input = [-2, 5, 3, -1, 2]
         output = 8
         self.assertEqual(bruteforce_max_subarray(input), output)
+        self.assertEqual(kadane_algorithm(input), output)
 
-    @unittest.skip("")
     def test_wih_positive_at_end(self):
         input = [-2, -5, -4, -3, 1, 2]
         output = 3
