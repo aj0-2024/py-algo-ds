@@ -8,8 +8,9 @@ Notes:
     2. Complexity of DFS & BFS is O(N + M) - nodes & edges
 """
 import Queue
+import unittest
 
-class Node(object):
+class TreeNode(object):
     
     def __init__(self, value):
         self.value = value
@@ -17,28 +18,32 @@ class Node(object):
         self.right = None
 
 
-def bfs(root, target):
+def breadth_first_search(root, target):
     """Check if target exists within the tree"""
 
-    queue_to_process = Queue.queue()
-    queue_to_process.put(root)
+    # BFS algorithm uses a queue to track the nodes to visit next
+    to_visit = Queue.queue()
+    to_visit.put(root)
+
+    # Visited set is used to skip processed nodes already - useful in graph
     visited = set([root])
 
-    while not queue_to_process.empty():
-        curr_node = queue_to_process.get()
+    while not to_visit.empty():
+        curr_node = to_visit.get()
 
         if curr_node._value == target:
             return True
 
-        if curr_node.left and curr_node.left not in visited:
-            queue_to_process.put(curr_node.left)
-
-        if curr_node.right and curr_node.right not in visited:
-            queue_to_process.put(curr_node.right)
-
+        # for a graph, use appropriate method to get the 
+        # array of neighbors for the curr_node
+        for child in [curr_node.left, curr_node.right]:
+            if child is curr_node:
+                raise Exception("Loop detected")
+            
+            if child and child not in visited:
+                to_visit.put(child)
+                
         visited.add(curr_node)
 
     return False
-        
-
     
