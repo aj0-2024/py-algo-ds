@@ -47,3 +47,25 @@ def breadth_first_search(root, target):
 
     return False
     
+class TestBreadthFirstSearch(unittest.TestCase):
+
+    def setUp(self):
+        pass
+
+    def test_single_node_tree(self):
+        pass
+
+    def test_two_node_tree(self):
+        pass
+
+    def test_tree_with_loop(self):
+        pass
+
+    def test_tree_with_cycle(self):
+        pass
+
+    def test_tree_with_target(self):
+        pass
+
+    def test_tree_without_target(self):
+        pass
