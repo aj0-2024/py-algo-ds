@@ -10,6 +10,9 @@ Applications:
 
 TODO:
     - The implementations are incomplete.
+
+Links:
+    - https://en.wikipedia.org/wiki/Maximum_subarray_problem
 """
 import unittest
 from typing import List
