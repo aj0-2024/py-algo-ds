@@ -38,3 +38,26 @@ Purely for educational purpose and not intended for any other use.
 | 26 | Fibonacci Series | ✔︎ | 1 |
 | 27 | Bellman Ford Algorithm | ✔︎ | 0 |
 
+## Data structures Status Table
+
+| # | Data Structure | Status | Num Reviewed |
+| -- | -- | -- | -- |
+| 1 | Array | 𐄂 | 0 |
+| 2 | Vector Array/List | 𐄂 | 0 |
+| 3 | Linked List (Single, Double) | ✔︎ | 0 |
+| 4 | Binary Search Tree | ✔︎ | 0 |
+| 5 | Min Heap & Max Heap | ✔︎ | 0 |
+| 6 | Stack | ✔︎ | 0 |
+| 7 | Queue | ✔︎ | 0 |
+| 8 | Dequeue | 𐄂 | 0 |
+| 9 | Priority Queue | 𐄂 | 0 |
+| 10 | Unweighted Graph | 𐄂 | 0 |
+| 11 | Weighted Graph | 𐄂 | 0 |
+| 12 | Trie | 𐄂 | 0 |
+| 13 | Hash Set | 𐄂 | 0 |
+| 14 | Hash Table | 𐄂 | 0 |
+| 15 | LSM Tree | 𐄂 | 0 |
+| 16 | B Tree | 𐄂 | 0 |
+| 17 | AVL Tree | 𐄂 | 0 |
+| 18 | Ternanry Search Tree | 𐄂 | 0 |
+| 19 | Bloom Filter | 𐄂 | 0 |
