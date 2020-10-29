@@ -18,7 +18,7 @@ import unittest
 from typing import List
 
 
-def bruteforce_max_subarray(sequence: List[int]):
+def find_max_subarray_bruteforce(sequence: List[int]):
     """Brute force implementation of the maximum subarray problem"""
     max_sum = float("-inf")
 
@@ -51,41 +51,32 @@ def kadane_algorithm(sequence: List[int]):
 def find_max_cross_subarray(sequence: List[int], low: int, mid: int, high: int):
     """Find max with a crossover point at mid"""
 
-    # calculate the max_left, left_sum
+    # calculate the left sum
     left_sum = float("-inf")
     curr_sum = 0
-
-    # TODO: None check
     max_left = None
 
     for left_index in range(mid, low):
         curr_sum += sequence[left_index]
-        print(curr_sum, left_sum)
         if curr_sum > left_sum:
             left_sum = curr_sum
-            curr_sum = sequence[left_index]
             max_left = left_index
 
     # calculate the right sum
     right_sum = float("-inf")
     curr_sum = 0
-
-    # TODO: None check
     max_right = None
 
     for right_index in range(mid+1, high):
         curr_sum += sequence[right_index]
         if curr_sum > right_sum:
             right_sum = curr_sum
-            curr_sum = sequence[right_index]
             max_right = right_index
-
-    print(max_left, max_right, left_sum + right_sum)
 
     return (max_left, max_right, left_sum + right_sum)
 
 
-def recursive_find_max_subarray(sequence: List[int], low: int, high: int) -> (int, int, int):
+def find_max_subarray_recursive(sequence: List[int], low: int, high: int) -> (int, int, int):
     """Using recursive method to solve the maximum subarray"""
 
     # base case
@@ -94,9 +85,9 @@ def recursive_find_max_subarray(sequence: List[int], low: int, high: int) -> (in
 
     mid = (low + high) // 2
 
-    left_low, left_high, left_sum = recursive_find_max_subarray(
+    left_low, left_high, left_sum = find_max_subarray_recursive(
         sequence, low, mid)
-    right_low, right_high, right_sum = recursive_find_max_subarray(
+    right_low, right_high, right_sum = find_max_subarray_recursive(
         sequence, mid + 1, high)
     cross_low, cross_high, cross_sum = find_max_cross_subarray(
         sequence, low, mid, high)
@@ -109,13 +100,13 @@ def recursive_find_max_subarray(sequence: List[int], low: int, high: int) -> (in
         return (cross_low, cross_high, cross_sum)
 
 
-def init_recursive_find_max_subarray(sequence: List[int]):
-    low, high, result = recursive_find_max_subarray(
+def find_max_subarray_recursive_init(sequence: List[int]):
+    low, high, result = find_max_subarray_recursive(
         sequence, 0, len(sequence) - 1)
     return result
 
 
-def iterative_find_max_subarray():
+def find_max_subarray_iterative(sequence: List[int]):
     pass
 
 
@@ -125,31 +116,32 @@ class TestMaxSubarray(unittest.TestCase):
         input = [10, 11, 21]
         output = 42
         self.assertEqual(kadane_algorithm(input), output)
-        self.assertEqual(bruteforce_max_subarray(input), output)
+        self.assertEqual(find_max_subarray_bruteforce(input), output)
+        self.assertEqual(find_max_subarray_recursive_init(input), output)
 
     def test_with_positive_at_start(self):
         input = [10, 11, -7, -10, 6]
         output = 21
         self.assertEqual(kadane_algorithm(input), output)
-        self.assertEqual(bruteforce_max_subarray(input), output)
+        self.assertEqual(find_max_subarray_bruteforce(input), output)
 
     def test_with_positive_at_middle(self):
         input = [-2, 5, 3, -1, 2]
         output = 9
         self.assertEqual(kadane_algorithm(input), output)
-        self.assertEqual(bruteforce_max_subarray(input), output)
+        self.assertEqual(find_max_subarray_bruteforce(input), output)
 
     def test_wih_positive_at_end(self):
         input = [-2, -5, -4, -3, 1, 2]
         output = 3
         self.assertEqual(kadane_algorithm(input), output)
-        self.assertEqual(bruteforce_max_subarray(input), output)
+        self.assertEqual(find_max_subarray_bruteforce(input), output)
         
     def test_with_mixed_numbers(self):
         input = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
         output = 6
         self.assertEqual(kadane_algorithm(input), output)
-        self.assertEqual(bruteforce_max_subarray(input), output)
+        self.assertEqual(find_max_subarray_bruteforce(input), output)
 
 
 if __name__ == "__main__":
