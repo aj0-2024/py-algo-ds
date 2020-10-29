@@ -124,36 +124,29 @@ def iterative_find_max_subarray():
 
 class TestMaxSubarray(unittest.TestCase):
 
-    @unittest.skip("Incomplete Implementation")
     def test_all_positive(self):
         input = [10, 11, 21]
         output = 42
-
-        self.assertEqual(bruteforce_max_subarray(input), output)
         self.assertEqual(kadane_algorithm(input), output)
 
-    @unittest.skip("Incomplete Implementation")
     def test_with_positive_at_start(self):
-        input = [10, 11, -7, 10, 6]
+        input = [10, 11, -7, -10, 6]
         output = 21
-
-        self.assertEqual(bruteforce_max_subarray(input), output)
         self.assertEqual(kadane_algorithm(input), output)
 
-    @unittest.skip("Incomplete Implementation")
     def test_with_positive_at_middle(self):
         input = [-2, 5, 3, -1, 2]
-        output = 8
+        output = 9
+        self.assertEqual(kadane_algorithm(input), output)
 
-    @unittest.skip("Incomplete Implementation")
     def test_wih_positive_at_end(self):
         input = [-2, -5, -4, -3, 1, 2]
         output = 3
+        self.assertEqual(kadane_algorithm(input), output)
         
     def test_with_mixed_numbers(self):
         input = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
         output = 6
-
         self.assertEqual(kadane_algorithm(input), output)
 
 
