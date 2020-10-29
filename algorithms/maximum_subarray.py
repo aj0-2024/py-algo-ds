@@ -35,8 +35,8 @@ def bruteforce_max_subarray(sequence: List[int]):
 def kadane_algorithm(sequence: List[int]):
     """Greedy algorithm to track max sum so far - O(n) time and O(1) space"""
 
-    if len(sequence) < 2:
-        raise ValueError("Atleast two elements are required")
+    if len(sequence) < 1:
+        return 0
 
     max_sum = sequence[0]
     curr_sum = sequence[0]
@@ -126,7 +126,6 @@ class TestMaxSubarray(unittest.TestCase):
         output = 42
         self.assertEqual(kadane_algorithm(input), output)
         self.assertEqual(bruteforce_max_subarray(input), output)
-                
 
     def test_with_positive_at_start(self):
         input = [10, 11, -7, -10, 6]
