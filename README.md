@@ -19,7 +19,7 @@ Purely for educational purpose and not intended for any other use.
 | 7 | Topological Sort | 𐄂 | 0 |
 | 8 | Depth First Search | ✔︎ | 0 |
 | 9 | Breadth First Search | ✔︎ | 1 |
-| 10 | A\* Search | ✔︎ | 0 |
+| 10 | A\* Search | 𐄂 | 0 |
 | 11 | Binary Search | ✔︎ | 1 |
 | 12 | Tree Traversals (Pre-Order, Post-Order & In-Order) | ✔︎ | 0 |
 | 13 | Maximum Subarray Problem | 𐄂 | 0 |
@@ -27,7 +27,7 @@ Purely for educational purpose and not intended for any other use.
 | 15 | Flood Fill Algorithm | 𐄂 | 0 |
 | 16 | Floyd Cycle Detection Algorithm | ✔︎ | 1 |
 | 17 | Longest Increasing Subsequence | 𐄂 | 0 |
-| 18 | Union Find Algorithm | 𐄂 | 0 |
+| 18 | Union Find Algorithm | 𐄂 | 1 |
 | 19 | Kruskal's Algorithm | 𐄂 | 0 |
 | 20 | Floyd Warshall's Algorithm | 𐄂 | 0 |
 | 21 | Huffman Coding Compression | 𐄂 | 0 |
