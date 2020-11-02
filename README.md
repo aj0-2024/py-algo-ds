@@ -30,7 +30,7 @@ Purely for educational purpose and not intended for any other use.
 | 18 | Union Find Algorithm | 𐄂 | 1 |
 | 19 | Kruskal's Algorithm | 𐄂 | 0 |
 | 20 | Floyd Warshall's Algorithm | 𐄂 | 0 |
-| 21 | Huffman Coding Compression | 𐄂 | 0 |
+| 21 | Huffman Coding Compression | 𐄂 | 1 |
 | 22 | Euclid's Algorithm for GCD | 𐄂 | 0 |
 | 23 | Primality Tests | 𐄂 | 0 |
 | 24 | Boyer Moore Majority Vote Algorithm | 𐄂 | 0 |
