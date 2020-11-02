@@ -51,12 +51,15 @@ def kadane_algorithm(sequence: List[int]):
 def find_max_cross_subarray(sequence: List[int], low: int, mid: int, high: int):
     """Find max with a crossover point at mid"""
 
+    # NOTE: Observe the end points of the for loop, there is a chance to easily
+    # make off by one errors
+
     # calculate the left sum
     left_sum = float("-inf")
     curr_sum = 0
     max_left = None
 
-    for left_index in range(mid, low):
+    for left_index in range(low, mid):
         curr_sum += sequence[left_index]
         if curr_sum > left_sum:
             left_sum = curr_sum
@@ -67,7 +70,7 @@ def find_max_cross_subarray(sequence: List[int], low: int, mid: int, high: int):
     curr_sum = 0
     max_right = None
 
-    for right_index in range(mid+1, high):
+    for right_index in range(mid, high + 1):
         curr_sum += sequence[right_index]
         if curr_sum > right_sum:
             right_sum = curr_sum
@@ -124,12 +127,14 @@ class TestMaxSubarray(unittest.TestCase):
         output = 21
         self.assertEqual(kadane_algorithm(input), output)
         self.assertEqual(find_max_subarray_bruteforce(input), output)
+        self.assertEqual(find_max_subarray_recursive_init(input), output)
 
     def test_with_positive_at_middle(self):
         input = [-2, 5, 3, -1, 2]
         output = 9
         self.assertEqual(kadane_algorithm(input), output)
         self.assertEqual(find_max_subarray_bruteforce(input), output)
+        self.assertEqual(find_max_subarray_recursive_init(input), output)
 
     def test_wih_positive_at_end(self):
         input = [-2, -5, -4, -3, 1, 2]
