@@ -23,7 +23,7 @@ Purely for educational purpose and not intended for any other use.
 | 11 | Binary Search | ✔︎ | 1 |
 | 12 | Tree Traversals (Pre-Order, Post-Order & In-Order) | ✔︎ | 0 |
 | 13 | Maximum Subarray Problem | 𐄂 | 0 |
-| 14 | Lee's Algorithm | 𐄂 | 0 |
+| 14 | Lee's Algorithm | 𐄂 | 1 |
 | 15 | Flood Fill Algorithm | 𐄂 | 0 |
 | 16 | Floyd Cycle Detection Algorithm | ✔︎ | 1 |
 | 17 | Longest Increasing Subsequence | 𐄂 | 0 |
