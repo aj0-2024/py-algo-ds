@@ -75,6 +75,8 @@ def find_max_cross_subarray(sequence: List[int], low: int, mid: int, high: int):
         if curr_sum > right_sum:
             right_sum = curr_sum
             max_right = right_index
+            
+    print(sequence, low, mid, high, left_sum, right_sum, "----")
 
     return (max_left, max_right, left_sum + right_sum)
 
@@ -115,6 +117,7 @@ def find_max_subarray_iterative(sequence: List[int]):
 
 class TestMaxSubarray(unittest.TestCase):
 
+    @unittest.skip("Done")
     def test_all_positive(self):
         input = [10, 11, 21]
         output = 42
@@ -122,6 +125,7 @@ class TestMaxSubarray(unittest.TestCase):
         self.assertEqual(find_max_subarray_bruteforce(input), output)
         self.assertEqual(find_max_subarray_recursive_init(input), output)
 
+    @unittest.skip("Done")
     def test_with_positive_at_start(self):
         input = [10, 11, -7, -10, 6]
         output = 21
