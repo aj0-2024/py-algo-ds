@@ -59,7 +59,9 @@ def find_max_cross_subarray(sequence: List[int], low: int, mid: int, high: int):
     curr_sum = 0
     max_left = None
 
-    for left_index in range(low, mid):
+    # NOTE: here mid downto low is critical for cross sum to be valid
+    # because the contiguous array starts from mid down to low
+    for left_index in range(mid, low - 1, -1):
         curr_sum += sequence[left_index]
         if curr_sum > left_sum:
             left_sum = curr_sum
@@ -70,14 +72,14 @@ def find_max_cross_subarray(sequence: List[int], low: int, mid: int, high: int):
     curr_sum = 0
     max_right = None
 
-    for right_index in range(mid, high + 1):
+    # NOTE: mid to high is critical for cross sum to be valid
+    # because array goes from low -> mid -> high 
+    for right_index in range(mid + 1, high + 1):
         curr_sum += sequence[right_index]
         if curr_sum > right_sum:
             right_sum = curr_sum
             max_right = right_index
             
-    print(sequence, low, mid, high, left_sum, right_sum, "----")
-
     return (max_left, max_right, left_sum + right_sum)
 
 
@@ -117,7 +119,6 @@ def find_max_subarray_iterative(sequence: List[int]):
 
 class TestMaxSubarray(unittest.TestCase):
 
-    @unittest.skip("Done")
     def test_all_positive(self):
         input = [10, 11, 21]
         output = 42
@@ -125,7 +126,6 @@ class TestMaxSubarray(unittest.TestCase):
         self.assertEqual(find_max_subarray_bruteforce(input), output)
         self.assertEqual(find_max_subarray_recursive_init(input), output)
 
-    @unittest.skip("Done")
     def test_with_positive_at_start(self):
         input = [10, 11, -7, -10, 6]
         output = 21
@@ -145,13 +145,14 @@ class TestMaxSubarray(unittest.TestCase):
         output = 3
         self.assertEqual(kadane_algorithm(input), output)
         self.assertEqual(find_max_subarray_bruteforce(input), output)
+        self.assertEqual(find_max_subarray_recursive_init(input), output)
         
     def test_with_mixed_numbers(self):
         input = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
         output = 6
         self.assertEqual(kadane_algorithm(input), output)
         self.assertEqual(find_max_subarray_bruteforce(input), output)
-
+        self.assertEqual(find_max_subarray_recursive_init(input), output)
 
 if __name__ == "__main__":
     unittest.main()
