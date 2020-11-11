@@ -21,7 +21,7 @@ Purely for educational purpose and not intended for any other use.
 | 9 | Breadth First Search | ✔︎ | 1 |
 | 10 | A\* Search | 𐄂 | 0 |
 | 11 | Binary Search | ✔︎ | 1 |
-| 12 | Tree Traversals (Pre-Order, Post-Order & In-Order) | ✔︎ | 0 |
+| 12 | Tree Traversals (Pre-Order, Post-Order & In-Order) | ✔︎ | 1 |
 | 13 | Maximum Subarray Problem | 𐄂 | 0 |
 | 14 | Lee's Algorithm | 𐄂 | 1 |
 | 15 | Flood Fill Algorithm | 𐄂 | 0 |
