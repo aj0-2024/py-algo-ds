@@ -37,6 +37,8 @@ Purely for educational purpose and not intended for any other use.
 | 25 | Fisher-Yates Shuffle Algorithm | 𐄂 | 0 |
 | 26 | Fibonacci Series | ✔︎ | 1 |
 | 27 | Bellman Ford Algorithm | ✔︎ | 0 |
+| 28 | Number of ways to make change | ✔︎ | 1 |
+| 29 | Knapsack 0/1 | 𐄂 | 0 |
 
 ## Data structures Status Table
 
