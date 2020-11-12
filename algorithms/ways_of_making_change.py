@@ -17,6 +17,7 @@ def num_ways_of_making_change(amount: Int, coins: List[Int]):
     num_ways_of_making_amount = [0] * (amount + 1)
 
     # there is only one way to make 0 change, this is our base case
+    # TODO: Figure out why this is?
     num_ways_of_making_amount[0] = 1
 
     for coin in coins:
