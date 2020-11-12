@@ -113,10 +113,6 @@ def find_max_subarray_recursive_init(sequence: List[int]):
     return result
 
 
-def find_max_subarray_iterative(sequence: List[int]):
-    pass
-
-
 class TestMaxSubarray(unittest.TestCase):
 
     def test_all_positive(self):
