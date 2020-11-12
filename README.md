@@ -11,7 +11,7 @@ Purely for educational purpose and not intended for any other use.
 | # | Algorithm Name | Status | Num Reviewed |
 | -- | -- | -- | -- |
 | 1 | Bubble Sort | ✔︎ | 0 |
-| 2 | Selection Sort | ✔︎ | 1 |
+| 2 | Selection Sort | ✔︎ | 2 |
 | 3 | Insertion Sort | ✔︎ | 2 |
 | 4 | Heap Sort | 𐄂 | 1 |
 | 5 | Merge Sort | ✔︎ | 0 |
