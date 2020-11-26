@@ -72,5 +72,8 @@ Purely for educational purpose and not intended for any other use.
 | 3 | Merge Sort | 0 |
 | 4 | Quick Sort | 0 |
 | 5 | Tree traversals | 0 |
-| 6 | Dynamic Programming - Fibonacci, Num ways to make change, Knapsack 0/1 | 0 |
+| 6 | Dynamic Programming - Fibonacci, Making change, Knapsack 0/1 | 0 |
 | 7 | Divide & Conquer - Maximum subarray problem | 0 |
+
+## TO-DO
+- Implement the tree traversals (recursive & iterative in a separate file)
