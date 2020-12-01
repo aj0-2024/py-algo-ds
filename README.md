@@ -67,10 +67,10 @@ Purely for educational purpose and not intended for any other use.
 ## Algorithm Review Table
 | # | Algorithm | Num Reviewed | 
 | -- | -- | -- |
-| 1 | Binary Search, Depth First Search & Breadth First Search | 0 |
+| 1 | Binary Search, Depth First Search & Breadth First Search | 1 |
 | 2 | Bubble Sort, Insertion Sort & Selection Sort | 0 |
 | 3 | Merge Sort | 0 |
-| 4 | Quick Sort | 0 |
+| 4 | Quick Sort | 1 |
 | 5 | Tree traversals | 0 |
 | 6 | Dynamic Programming - Fibonacci, Making change, Knapsack 0/1 | 0 |
 | 7 | Divide & Conquer - Maximum subarray problem | 0 |

@@ -20,6 +20,8 @@ def partition(sequence, start, end):
     low = start + 1
     high = end
 
+    # arrage in such a way that lowest are below pivot
+    # and highest are above pivot
     while True:
         while low <= high and sequence[high] >= pivot:
             high = high - 1
