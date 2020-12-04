@@ -9,7 +9,7 @@ Purely for educational purpose and not intended for any other use.
 ## Algorithm Status Table
 
 | # | Algorithm Name | Status | 
-| -- | -- | -- | -- |
+| -- | -- | -- |
 | 1 | Bubble Sort | ✔︎ |
 | 2 | Selection Sort | ✔︎ |
 | 3 | Insertion Sort | ✔︎ |
@@ -43,7 +43,7 @@ Purely for educational purpose and not intended for any other use.
 ## Data structures Status Table
 
 | # | Data Structure | Status |
-| -- | -- | -- | -- |
+| -- | -- | -- |
 | 1 | Array | 𐄂 |
 | 2 | Vector Array/List | 𐄂 |
 | 3 | Linked List (Single, Double) | ✔︎ |
