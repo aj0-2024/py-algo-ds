@@ -71,11 +71,11 @@ Purely for educational purpose and not intended for any other use.
 | 2 | Bubble Sort, Insertion Sort & Selection Sort | 0 |
 | 3 | Merge Sort | 0 |
 | 4 | Quick Sort | 1 |
-| 5 | Tree traversals | 0 |
+| 5 | Tree traversals | 1 |
 | 6 | Dynamic Programming - Fibonacci, Making change, Knapsack 0/1, Levenshtein Distance | 0 |
 | 7 | Divide & Conquer - Maximum subarray problem | 0 |
 | 8 | Recursion - Binary Tree Diameter | 0 |
-| 9 | Greedy Approach - Kadane's algorithm | 0 |
+| 9 | Greedy Approach - Kadane's algorithm | 1 |
 
 ## TO-DO
 - Implement the tree traversals (recursive & iterative in a separate file)
