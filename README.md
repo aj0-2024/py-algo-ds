@@ -68,7 +68,7 @@ Purely for educational purpose and not intended for any other use.
 | # | Algorithm | Num Reviewed | 
 | -- | -- | -- |
 | 1 | Binary Search, Depth First Search & Breadth First Search | 1 |
-| 2 | Bubble Sort, Insertion Sort & Selection Sort | 0 |
+| 2 | Bubble Sort, Insertion Sort & Selection Sort | 1 |
 | 3 | Merge Sort | 0 |
 | 4 | Quick Sort | 1 |
 | 5 | Tree traversals | 1 |
