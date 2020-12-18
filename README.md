@@ -67,15 +67,13 @@ Purely for educational purpose and not intended for any other use.
 ## Algorithm Review Table
 | # | Algorithm | Num Reviewed | 
 | -- | -- | -- |
-| 1 | Binary Search, Depth First Search & Breadth First Search | 1 |
-| 2 | Bubble Sort, Insertion Sort & Selection Sort | 1 |
-| 3 | Merge Sort | 0 |
-| 4 | Quick Sort | 1 |
-| 5 | Tree traversals | 1 |
-| 6 | Dynamic Programming - Fibonacci, Making change, Knapsack 0/1, Levenshtein Distance | 0 |
-| 7 | Divide & Conquer - Maximum subarray problem | 0 |
-| 8 | Recursion - Binary Tree Diameter | 0 |
-| 9 | Greedy Approach - Kadane's algorithm | 1 |
+| 1 | Searching - Binary Search, Depth First Search & Breadth First Search | 1 |
+| 2 | Sorting - Bubble Sort, Insertion Sort & Selection Sort | 1 |
+| 3 | Dynamic Programming - Fibonacci, Making change, Knapsack 0/1, Levenshtein Distance | 0 |
+| 4 | Divide & Conquer - Maximum subarray problem, Merge Sort, Quick Sort | 0 |
+| 5 | Recursion - Tree traversals, Binary Tree Inversion & Binary Tree Diameter | 0 |
+| 6 | Greedy Approach - Kadane's algorithm | 1 |
+| 7 | Iterative Approach - Binary Tree Inversion | 0 |
 
 ## TO-DO
 - Implement the tree traversals (recursive & iterative in a separate file)
