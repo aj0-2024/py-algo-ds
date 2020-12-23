@@ -6,8 +6,21 @@ Welcome ! This repository contains notes & implementations of various data struc
 
 Purely for educational purpose and not intended for any other use.
 
+- [Python Algorithms and Data structures](#python-algorithms-and-data-structures)
+  - [Algorithm Status Table](#algorithm-status-table)
+  - [Data structures Status Table](#data-structures-status-table)
+  - [Algorithm Review Table](#algorithm-review-table)
+  - [Problem sets](#problem-sets)
+    - [Searching](#searching)
+    - [Basic Sorting](#basic-sorting)
+    - [Recursion](#recursion)
+    - [Dynamic Programming](#dynamic-programming)
+    - [Divide & Conquer](#divide--conquer)
+    - [Greedy approach](#greedy-approach)
+    - [Iterative approach](#iterative-approach)
+  - [TO-DO](#to-do)
+  
 ## Algorithm Status Table
-
 | # | Algorithm Name | Status | 
 | -- | -- | -- |
 | 1 | Bubble Sort | ✔︎ |
@@ -39,6 +52,7 @@ Purely for educational purpose and not intended for any other use.
 | 27 | Bellman Ford Algorithm | ✔︎ |
 | 28 | Number of ways to make change | ✔︎ |
 | 29 | Knapsack 0/1 | 𐄂 |
+| 30 | Levenshtein Distance | x |
 
 ## Data structures Status Table
 
@@ -68,15 +82,16 @@ Purely for educational purpose and not intended for any other use.
 | # | Algorithm | Num Reviewed | 
 | -- | -- | -- |
 | 1 | Searching | 1 |
-| 2 | Sorting - Bubble Sort, Insertion Sort & Selection Sort | 1 |
-| 3 | Dynamic Programming - Fibonacci, Making change, Knapsack 0/1, Levenshtein Distance | 0 |
-| 4 | Divide & Conquer - Maximum subarray problem, Merge Sort, Quick Sort | 0 |
-| 5 | Recursion - Check below for list of problems | 0 |
-| 6 | Greedy Approach - Kadane's algorithm | 1 |
+| 2 | Basic Sorting | 1 |
+| 3 | Dynamic Programming | 0 |
+| 4 | Divide & Conquer | 0 |
+| 5 | Recursion | 0 |
+| 6 | Greedy Approach | 1 |
 | 7 | Iterative Approach - Binary Tree Inversion | 0 |
 
-## Searching Problems
+## Problem sets
 
+### Searching 
 | # | Problem |
 | --- | --- |
 | 1 | Binary Search |
@@ -84,8 +99,15 @@ Purely for educational purpose and not intended for any other use.
 | 3 | Breadth First Search |
 | 4 | Searching in a sorted matrix (2D binary search) |
 
-## Recursion Problems
+### Basic Sorting
+| # | Problem |
+| --- | --- |
+| 1 | Bubble Sort |
+| 2 | Insertion Sort |
+| 3 | Selection Sort |
 
+
+### Recursion 
 | # | Problem |
 | --- | --- |
 | 1 | Tree traversals |
@@ -93,6 +115,31 @@ Purely for educational purpose and not intended for any other use.
 | 3 | Binary tree diameter |
 | 4 | Permutations |
 | 5 | Powerset |
+
+### Dynamic Programming 
+| # | Problem |
+| --- | --- |
+| 1 | Fibonacci series |
+| 2 | Making change with denominations |
+| 3 | Knapsack 0/1 |
+| 4 | Levenshtein Distance | 
+
+### Divide & Conquer 
+| # | Problem |
+| --- | --- |
+| 1 | Maximum subarray problem |
+| 2 | Quick sort |
+| 3 | Merge sort |
+
+### Greedy approach
+| # | Problem |
+| --- | --- |
+| 1 | Kadane's algorithm |
+
+### Iterative approach 
+| # | Problem |
+| --- | --- |
+| 1 | Binary Tree Inversion | 
 
 ## TO-DO
 - Implement the tree traversals (recursive & iterative in a separate file)
