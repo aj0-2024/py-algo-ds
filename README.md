@@ -71,9 +71,19 @@ Purely for educational purpose and not intended for any other use.
 | 2 | Sorting - Bubble Sort, Insertion Sort & Selection Sort | 1 |
 | 3 | Dynamic Programming - Fibonacci, Making change, Knapsack 0/1, Levenshtein Distance | 0 |
 | 4 | Divide & Conquer - Maximum subarray problem, Merge Sort, Quick Sort | 0 |
-| 5 | Recursion - Tree traversals, Binary Tree Inversion & Binary Tree Diameter | 0 |
+| 5 | Recursion - Check below for list of problems | 0 |
 | 6 | Greedy Approach - Kadane's algorithm | 1 |
 | 7 | Iterative Approach - Binary Tree Inversion | 0 |
+
+## Recursion Problems
+
+| # | Problem |
+| --- | --- |
+| 1 | Tree traversals |
+| 2 | Binary tree inversion |
+| 3 | Binary tree diameter |
+| 4 | Permutations |
+| 5 | Subsets |
 
 ## TO-DO
 - Implement the tree traversals (recursive & iterative in a separate file)
