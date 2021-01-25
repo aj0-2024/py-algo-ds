@@ -81,9 +81,9 @@ Purely for educational purpose and not intended for any other use.
 ## Algorithm Review Table
 | # | Algorithm | Num Reviewed | 
 | -- | -- | -- |
-| 1 | Searching | 1 |
-| 2 | Basic Sorting | 1 |
-| 3 | Dynamic Programming | 0 |
+| 1 | Searching | 2 |
+| 2 | Basic Sorting | 2 |
+| 3 | Dynamic Programming | 1 |
 | 4 | Divide & Conquer | 0 |
 | 5 | Recursion | 0 |
 | 6 | Greedy Approach | 1 |
