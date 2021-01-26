@@ -1,5 +1,5 @@
 """
-Algorithm to find the permutations of a given array
+Algorithm to find the permutations
 """
 
 def get_permutations(sequence, permutation_curr = [], permutation_all = []):
@@ -27,4 +27,29 @@ def get_permutations(sequence, permutation_curr = [], permutation_all = []):
         )
     
     return permutation_all
-    
+
+def get_permutations_str(string_given):
+
+    # base case
+    if len(string_given) <= 1:
+        return set([string_given])
+
+    string_without_last_character = string_given[:1]
+    last_character = string_given[-1]
+
+    all_permutations_without_last_character = get_permutations_str(string_without_last_character)
+
+    permutations = Set()
+
+    for permutation_curr in all_permutations_without_last_character:
+        for position in range(len(string_without_last_character) + 1):
+            
+            permutation_new = (
+                permutation_curr[:position] + 
+                last_character + 
+                permutation[position:]
+            )
+
+            permutations.add(permutation_new)
+
+    return permutations
