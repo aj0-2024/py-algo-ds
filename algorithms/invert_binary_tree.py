@@ -15,11 +15,8 @@ def invert_binary_tree_recursive(tree):
     if not tree:
         return
 
-    if tree.left:
-        invert_binary_tree_recursive(tree.left)
-
-    if tree.right:
-        invert_binary_tree_recursive(tree.right)
+    invert_binary_tree_recursive(tree.left)
+    invert_binary_tree_recursive(tree.right)
 
     tree.left, tree.right = tree.right, tree.left
     return tree
@@ -35,13 +32,16 @@ def invert_binary_tree_iterative(tree):
 
     while not to_visit.empty():
         node = to_visit.get()
+
+        if not node:
+            continue
+        
+        # invert the left and right sub trees
         node.left, node.right = node.right, node.left
         
-        if node.left:
-            to_visit.put(node.left)
-
-        if node.right:
-            to_visit.put(node.right)
+        # add nodes to be processed
+        to_visit.put(node.left)
+        to_visit.put(node.right)
 
     return tree
 

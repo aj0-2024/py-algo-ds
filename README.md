@@ -85,7 +85,7 @@ Purely for educational purpose and not intended for any other use.
 | 2 | Basic Sorting | 2 |
 | 3 | Dynamic Programming | 1 |
 | 4 | Divide & Conquer | 0 |
-| 5 | Recursion | 0 |
+| 5 | Recursion | 1 |
 | 6 | Greedy Approach | 1 |
 | 7 | Iterative Approach - Binary Tree Inversion | 0 |
 
