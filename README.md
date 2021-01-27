@@ -52,7 +52,7 @@ Purely for educational purpose and not intended for any other use.
 | 27 | Bellman Ford Algorithm | ✔︎ |
 | 28 | Number of ways to make change | ✔︎ |
 | 29 | Knapsack 0/1 | 𐄂 |
-| 30 | Levenshtein Distance | x |
+| 30 | Levenshtein Distance | ✔︎ |
 
 ## Data structures Status Table
 
@@ -85,9 +85,8 @@ Purely for educational purpose and not intended for any other use.
 | 2 | Basic Sorting | 2 |
 | 3 | Dynamic Programming | 1 |
 | 4 | Divide & Conquer | 0 |
-| 5 | Recursion | 1 |
+| 5 | Recursion & Iterative | 1 |
 | 6 | Greedy Approach | 1 |
-| 7 | Iterative Approach - Binary Tree Inversion | 0 |
 
 ## Problem sets
 
@@ -135,11 +134,6 @@ Purely for educational purpose and not intended for any other use.
 | # | Problem |
 | --- | --- |
 | 1 | Kadane's algorithm |
-
-### Iterative approach 
-| # | Problem |
-| --- | --- |
-| 1 | Binary Tree Inversion | 
 
 ## TO-DO
 - Implement the tree traversals (recursive & iterative in a separate file)
