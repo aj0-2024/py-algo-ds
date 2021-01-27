@@ -50,8 +50,8 @@ def merge_sort(seq):
     left = seq[:mid]
     right = seq[mid:]
 
-    sorted_seq_1 = merge_sort(left)
-    sorted_seq_2 = merge_sort(right)
+    sorted_seq_left = merge_sort(left)
+    sorted_seq_right = merge_sort(right)
     
-    return merge(sorted_seq_1, sorted_seq_2)
+    return merge(sorted_seq_left, sorted_seq_right)
 

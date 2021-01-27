@@ -13,7 +13,7 @@ References:
 """
 import unittest
 
-def partition(sequence, start, end):
+def partition_and_arrange(sequence, start, end):
     """Divide the list into two and move elements around pivot"""
 
     pivot = sequence[start]
@@ -46,7 +46,7 @@ def quick_sort(sequence, start, end):
     if start >= end:
         return sequence
 
-    mid = partition(sequence, start, end)
+    mid = partition_and_arrange(sequence, start, end)
     quick_sort(sequence, start, mid - 1)
     quick_sort(sequence, mid + 1, end)
 
