@@ -97,7 +97,7 @@ Purely for educational purpose and not intended for any other use.
 | 1 | Binary Search |
 | 2 | Depth First Search |
 | 3 | Breadth First Search |
-| 4 | Searching in a sorted matrix (2D binary search) |
+| 4 | Matrix Search |
 
 ### Basic Sorting
 | # | Problem |
