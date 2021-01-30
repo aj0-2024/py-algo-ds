@@ -53,6 +53,7 @@ Purely for educational purpose and not intended for any other use.
 | 28 | Number of ways to make change | ✔︎ |
 | 29 | Knapsack 0/1 | 𐄂 |
 | 30 | Levenshtein Distance | ✔︎ |
+| 30 | Matrix Search | ✔︎ |
 
 ## Data structures Status Table
 
