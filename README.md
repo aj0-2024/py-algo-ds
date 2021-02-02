@@ -55,6 +55,7 @@ Purely for educational purpose and not intended for any other use.
 | 30 | Levenshtein Distance | ✔︎ |
 | 31 | Matrix Search | ✔︎ |
 | 32 | Find Rotation Point | ✔︎ |
+| 33 | Find Duplicate Integer | 𐄂 |
 
 ## Data structures Status Table
 
