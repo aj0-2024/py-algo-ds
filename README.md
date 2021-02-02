@@ -84,12 +84,13 @@ Purely for educational purpose and not intended for any other use.
 ## Algorithm Review Table
 | # | Algorithm | Num Reviewed | 
 | -- | -- | -- |
-| 1 | Searching | 2 |
+| 1 | Searching | 3 |
 | 2 | Basic Sorting | 2 |
 | 3 | Dynamic Programming | 1 |
-| 4 | Divide & Conquer | 0 |
+| 4 | Divide & Conquer | 1 |
 | 5 | Recursion & Iterative | 1 |
 | 6 | Greedy Approach | 1 |
+| 7 | Finding duplicate value | 0 |
 
 ## Problem sets
 
