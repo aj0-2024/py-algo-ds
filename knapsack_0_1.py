@@ -1,6 +1,5 @@
 """
-One of the basic dynamic programming questions. Not the fastest, so if a good enough algorithm fits
-the requirements, use it.
+One of the basic dynamic programming questions.
 """
 import unittest
 
