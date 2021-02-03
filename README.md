@@ -35,7 +35,7 @@ Purely for educational purpose and not intended for any other use.
 | 10 | A\* Search | 𐄂 |
 | 11 | Binary Search | ✔︎ |
 | 12 | Tree Traversals (Pre-Order, Post-Order & In-Order) | ✔︎ |
-| 13 | Maximum Subarray Problem | 𐄂 |
+| 13 | Maximum Subarray Problem | ✔︎ |
 | 14 | Lee's Algorithm | 𐄂 |
 | 15 | Flood Fill Algorithm | 𐄂 | 
 | 16 | Floyd Cycle Detection Algorithm | ✔︎ |
