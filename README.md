@@ -45,13 +45,13 @@ Purely for educational purpose and not intended for any other use.
 | 20 | Floyd Warshall's Algorithm | 𐄂 |
 | 21 | Huffman Coding Compression | 𐄂 |
 | 22 | Euclid's Algorithm for GCD | 𐄂 |
-| 23 | Primality Tests | 𐄂 |
+| 23 | Primality Tests | ✔︎ |
 | 24 | Boyer Moore Majority Vote Algorithm | 𐄂 |
 | 25 | Fisher-Yates Shuffle Algorithm | 𐄂 |
 | 26 | Fibonacci Series | ✔︎ |
 | 27 | Bellman Ford Algorithm | ✔︎ |
 | 28 | Number of ways to make change | ✔︎ |
-| 29 | Knapsack 0/1 | 𐄂 |
+| 29 | Knapsack 0/1 | ✔︎ |
 | 30 | Levenshtein Distance | ✔︎ |
 | 31 | Matrix Search | ✔︎ |
 | 32 | Find Rotation Point | ✔︎ |
