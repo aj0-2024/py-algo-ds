@@ -47,7 +47,7 @@ Purely for educational purpose and not intended for any other use.
 | 22 | Euclid's Algorithm for GCD | 𐄂 |
 | 23 | Primality Tests | ✔︎ |
 | 24 | Boyer Moore Majority Vote Algorithm | 𐄂 |
-| 25 | Fisher-Yates Shuffle Algorithm | 𐄂 |
+| 25 | Fisher-Yates Shuffle Algorithm | ✔︎ |
 | 26 | Fibonacci Series | ✔︎ |
 | 27 | Bellman Ford Algorithm | ✔︎ |
 | 28 | Number of ways to make change | ✔︎ |
@@ -90,7 +90,7 @@ Purely for educational purpose and not intended for any other use.
 | 4 | Divide & Conquer | 1 |
 | 5 | Recursion & Iterative | 1 |
 | 6 | Greedy Approach | 1 |
-| 7 | Finding duplicate value | 0 |
+| 7 | Array Algorithms | 0 |
 
 ## Problem sets
 
@@ -140,6 +140,11 @@ Purely for educational purpose and not intended for any other use.
 | 1 | Kadane's algorithm |
 | 2 | Highest product of 3 |
 | 3 | Product of all other numbers |
+
+### Array Algorithms
+| # | Problem |
+| --- | --- |
+| 1 | Find duplicate number |
 
 ## TO-DO
 - Implement the tree traversals (recursive & iterative in a separate file)
