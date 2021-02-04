@@ -90,7 +90,8 @@ Purely for educational purpose and not intended for any other use.
 | 4 | Divide & Conquer | 1 |
 | 5 | Recursion & Iterative | 1 |
 | 6 | Greedy Approach | 1 |
-| 7 | Array Algorithms | 0 |
+| 7 | Matrix Problems | 0 |
+| 8 | Array Problems | 0 |
 
 ## Problem sets
 
@@ -141,7 +142,13 @@ Purely for educational purpose and not intended for any other use.
 | 2 | Highest product of 3 |
 | 3 | Product of all other numbers |
 
-### Array Algorithms
+### Matrix Problems
+| # | Problem |
+| --- | --- |
+| 1 | River Sizes |
+| 2 | Remove Islands |
+
+### Array Problems
 | # | Problem |
 | --- | --- |
 | 1 | Find duplicate number |
