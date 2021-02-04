@@ -138,6 +138,8 @@ Purely for educational purpose and not intended for any other use.
 | # | Problem |
 | --- | --- |
 | 1 | Kadane's algorithm |
+| 2 | Highest product of 3 |
+| 3 | Product of all other numbers |
 
 ## TO-DO
 - Implement the tree traversals (recursive & iterative in a separate file)
