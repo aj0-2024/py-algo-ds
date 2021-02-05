@@ -88,10 +88,11 @@ Purely for educational purpose and not intended for any other use.
 | 2 | Basic Sorting | 2 |
 | 3 | Dynamic Programming | 2 |
 | 4 | Divide & Conquer | 1 |
-| 5 | Recursion & Iterative | 1 |
-| 6 | Greedy Approach | 1 |
-| 7 | Matrix Problems | 0 |
-| 8 | Array Problems | 0 |
+| 5 | Recursion | 1 |
+| 6 | Iteration | 0 |
+| 7 | Greedy Approach | 1 |
+| 8 | Matrix Problems | 0 |
+| 9 | Array Problems | 0 |
 
 ## Problem sets
 
@@ -119,6 +120,11 @@ Purely for educational purpose and not intended for any other use.
 | 3 | Binary tree diameter |
 | 4 | Permutations |
 | 5 | Powerset |
+
+### Iteration
+| # | Problem |
+| --- | --- |
+| 1 | In order traversal |
 
 ### Dynamic Programming 
 | # | Problem |
@@ -152,6 +158,9 @@ Purely for educational purpose and not intended for any other use.
 | # | Problem |
 | --- | --- |
 | 1 | Find duplicate number |
+| 2 | Merge meeting times |
+| 3 | Reverse string in place |
+| 4 | Reverse words in place |
 
 ## TO-DO
 - Implement the tree traversals (recursive & iterative in a separate file)
