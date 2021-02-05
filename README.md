@@ -94,6 +94,14 @@ Purely for educational purpose and not intended for any other use.
 | 8 | Matrix Problems | 0 |
 | 9 | Array Problems | 0 |
 
+## Data structure review table
+| # | Data Structure | Num Reviewed |
+| -- | -- | -- |
+| 1 | Binary Search Tree | 0 |
+| 2 | Linked List | 0 |
+| 3 | Stack | 0 |
+| 4 | Queue | 0 |
+
 ## Problem sets
 
 ### Searching 
