@@ -144,9 +144,9 @@ class BinarySearchTree(object):
 
         print(node._value)
         if node._left:
-            self.in_order_traversal(node._left)
+            self.pre_order_traversal(node._left)
         if node._right:
-            self.in_order_traversal(node._right)
+            self.pre_order_traversal(node._right)
 
     def post_order_traversal(self, node=None):
         """Returns a list with nodes traversed post-order: left, right, root"""
@@ -155,9 +155,9 @@ class BinarySearchTree(object):
             node = self._root
 
         if node._left:
-            self.in_order_traversal(node._left)
+            self.post_order_traversal(node._left)
         if node._right:
-            self.in_order_traversal(node._right)
+            self.post_order_traversal(node._right)
         print(node._value)
 
 
