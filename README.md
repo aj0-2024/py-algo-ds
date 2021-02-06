@@ -56,6 +56,7 @@ Purely for educational purpose and not intended for any other use.
 | 31 | Matrix Search | ✔︎ |
 | 32 | Find Rotation Point | ✔︎ |
 | 33 | Find Duplicate Integer | ✔︎ |
+| 34 | Towers of Hanoi | ✔︎ |
 
 ## Data structures Status Table
 
@@ -128,6 +129,7 @@ Purely for educational purpose and not intended for any other use.
 | 3 | Binary tree diameter |
 | 4 | Permutations |
 | 5 | Powerset |
+| 6 | Towers of hanoi |
 
 ### Iteration
 | # | Problem |
