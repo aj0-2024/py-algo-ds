@@ -86,7 +86,7 @@ Purely for educational purpose and not intended for any other use.
 | # | Algorithm | Num Reviewed | 
 | -- | -- | -- |
 | 1 | Searching | 3 |
-| 2 | Basic Sorting | 2 |
+| 2 | Basic Sorting | 3 |
 | 3 | Dynamic Programming | 2 |
 | 4 | Divide & Conquer | 1 |
 | 5 | Recursion | 1 |
@@ -94,6 +94,7 @@ Purely for educational purpose and not intended for any other use.
 | 7 | Greedy Approach | 1 |
 | 8 | Matrix Problems | 0 |
 | 9 | Array Problems | 0 |
+| 10 | Tree Problems | 0 |
 
 ## Data structure review table
 | # | Data Structure | Num Reviewed |
@@ -142,8 +143,9 @@ Purely for educational purpose and not intended for any other use.
 | --- | --- |
 | 1 | Fibonacci series |
 | 2 | Making change with denominations |
-| 3 | Knapsack 0/1 |
-| 4 | Levenshtein Distance | 
+| 3 | Minimum number of coins |
+| 4 | Knapsack 0/1 |
+| 5 | Levenshtein Distance | 
 
 ### Divide & Conquer 
 | # | Problem |
@@ -172,6 +174,11 @@ Purely for educational purpose and not intended for any other use.
 | 2 | Merge meeting times |
 | 3 | Reverse string in place |
 | 4 | Reverse words in place |
+
+### Tree Problems
+| # | Problem |
+| --- | --- |
+| 1 | Youngest common ancestor |
 
 ## TO-DO
 - Implement the tree traversals (recursive & iterative in a separate file)
