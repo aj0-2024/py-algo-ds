@@ -27,7 +27,7 @@ def bubble_sort(input_data):
     while not is_sorted:
         is_sorted = True
 
-        for curr_index in range(0, last_unsorted_index):
+        for curr_index in range(last_unsorted_index):
             curr_element = input_data[curr_index]
 
             # be sure to not go out of bounds in the loop since we are accessing

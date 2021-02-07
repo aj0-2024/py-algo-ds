@@ -102,6 +102,7 @@ Purely for educational purpose and not intended for any other use.
 | 2 | Linked List | 0 |
 | 3 | Stack | 0 |
 | 4 | Queue | 0 |
+| 5 | Graph (Undirected, Directed) | 0 |
 
 ## Problem sets
 
