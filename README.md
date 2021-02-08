@@ -88,7 +88,7 @@ Purely for educational purpose and not intended for any other use.
 | 1 | Searching | 3 |
 | 2 | Basic Sorting | 3 |
 | 3 | Dynamic Programming | 2 |
-| 4 | Divide & Conquer | 1 |
+| 4 | Divide & Conquer | 2 |
 | 5 | Recursion | 1 |
 | 6 | Iteration | 0 |
 | 7 | Greedy Approach | 1 |
