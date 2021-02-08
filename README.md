@@ -92,7 +92,7 @@ Purely for educational purpose and not intended for any other use.
 | 5 | Recursion | 1 |
 | 6 | Iteration | 0 |
 | 7 | Greedy Approach | 1 |
-| 8 | Matrix Problems | 0 |
+| 8 | Matrix Problems | 1 |
 | 9 | Array Problems | 0 |
 | 10 | Tree Problems | 0 |
 
@@ -179,6 +179,12 @@ Purely for educational purpose and not intended for any other use.
 | # | Problem |
 | --- | --- |
 | 1 | Youngest common ancestor |
+
+### Common Mistakes
+| # | Description | Num times |
+| --- | --- | --- |
+| 1 | Off by one error | 1 |
+| 2 | Input validation (Checks for empty) | 1 |
 
 ## TO-DO
 - Implement the tree traversals (recursive & iterative in a separate file)
