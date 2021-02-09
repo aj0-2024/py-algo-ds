@@ -87,7 +87,7 @@ Purely for educational purpose and not intended for any other use.
 | -- | -- | -- |
 | 1 | Searching | 3 |
 | 2 | Basic Sorting | 3 |
-| 3 | Dynamic Programming | 2 |
+| 3 | Dynamic Programming | 3 |
 | 4 | Divide & Conquer | 2 |
 | 5 | Recursion | 1 |
 | 6 | Iteration | 0 |
@@ -103,7 +103,7 @@ Purely for educational purpose and not intended for any other use.
 | 2 | Linked List | 0 |
 | 3 | Stack | 0 |
 | 4 | Queue | 0 |
-| 5 | Graph (Undirected, Directed) | 0 |
+| 6 | Heap | 0 |
 
 ## Problem sets
 
