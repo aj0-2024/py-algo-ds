@@ -17,7 +17,9 @@ def levenshtein_distance(original_str, edited_str) -> int:
 
     # initialize 2D array
     # +1 is for "" (empty strings) which is the base case
-    num_edits = [[col for col in range(len(original_str) + 1)] for row in range(len(edited_str) + 1)]
+    num_edits = [
+        [col for col in range(len(original_str) + 1)] for row in range(len(edited_str) + 1)
+    ]
 
     # initialize columns (base case)
     for row in range(1, len(edited_str) + 1):
