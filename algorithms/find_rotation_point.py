@@ -12,27 +12,50 @@ def find_rotation_point(sequence):
 
     left = 0
     right = len(sequence) - 1
+    first = sequence[0]
+
+    # TODO: This algorithm only works for sequence that is strictly decreasing & increasing
 
     while left <= right:
 
         mid = (left + right) // 2
         
-        if sequence[left] >= sequence[mid]: 
-            left = mid + 1
+        if sequence[mid] >= first:
+            left = mid
         else:
-            right = mid - 1
+            right = mid
 
-
+        if left + 1 == right:
+            return right
+    
     return right 
             
 class TestFindRotationPoint(unittest.TestCase):
 
-    def test_increasing_and_then_decreasing(self):
+    def test_increasing_at_center(self):
         self.assertEqual(
-            find_rotation_point([5, 4, 3, 2, 1, 2, 3, 4]),
+            find_rotation_point([4, 3, 2, 1, 2, 3, 4]),
+            3
+        )
+
+    def test_increasing_at_start(self):
+        self.assertEqual(
+            find_rotation_point([5, 1, 2, 3, 4]),
+            1
+        )
+
+    def test_decreasing_at_end(self):
+        self.assertEqual(
+            find_rotation_point([5, 4, 3, 2, 1, 2]),
             4
         )
 
+    def test_decreasing_at_center(self):
+        self.assertEqual(
+            find_rotation_point([1, 2, 3, 4, 3, 2, 1]),
+            3
+        )
+        
     def test_strictly_decreasing(self):
         self.assertEqual(
             find_rotation_point([5, 4, 3, 2, 1]),
