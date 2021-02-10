@@ -42,7 +42,7 @@ def search_for_duplicated_value(sequence):
         # find the total number of numbers in lower range
         num_items_in_lower = 0
         for number in sequence:
-            if number >= lower_floor and number <= lower_ceiling:
+            if lower_floor <= number <= lower_ceiling:
                 num_items_in_lower += 1
 
         # find the total possible number in lower range

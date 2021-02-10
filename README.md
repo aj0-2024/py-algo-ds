@@ -160,6 +160,7 @@ Purely for educational purpose and not intended for any other use.
 | 1 | Kadane's algorithm |
 | 2 | Highest product of 3 |
 | 3 | Product of all other numbers |
+| 4 | Sunset Views |
 
 ### Matrix Problems
 | # | Problem |
