@@ -54,7 +54,7 @@ Purely for educational purpose and not intended for any other use.
 | 29 | Knapsack 0/1 | ✔︎ |
 | 30 | Levenshtein Distance | ✔︎ |
 | 31 | Matrix Search | ✔︎ |
-| 32 | Find Rotation Point | ✔︎ |
+| 32 | Find Rotation Point | 𐄂 |
 | 33 | Find Duplicate Integer | ✔︎ |
 | 34 | Towers of Hanoi | ✔︎ |
 
