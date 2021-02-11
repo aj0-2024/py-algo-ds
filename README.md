@@ -106,7 +106,7 @@ Purely for educational purpose and not intended for any other use.
 | 4 | Queue | 0 |
 | 6 | Heap | 0 |
 
-## Problem sets
+## Categories
 
 ### Searching 
 | # | Problem |
