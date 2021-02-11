@@ -91,10 +91,11 @@ Purely for educational purpose and not intended for any other use.
 | 4 | Divide & Conquer | 2 |
 | 5 | Recursion | 1 |
 | 6 | Iteration | 0 |
-| 7 | Greedy Approach | 1 |
+| 7 | Greedy Approach | 2 |
 | 8 | Matrix Problems | 1 |
 | 9 | Array Problems | 0 |
 | 10 | Tree Problems | 0 |
+| 11 | Geometry Problems | 0 |
 
 ## Data structure review table
 | # | Data Structure | Num Reviewed |
@@ -180,6 +181,11 @@ Purely for educational purpose and not intended for any other use.
 | # | Problem |
 | --- | --- |
 | 1 | Youngest common ancestor |
+
+### Geometry Problems
+| # | Problem |
+| --- | --- |
+| 1 | Recentagle interception problem |
 
 ### Common Mistakes
 | # | Description | Num times |
