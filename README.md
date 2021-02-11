@@ -147,6 +147,12 @@ Purely for educational purpose and not intended for any other use.
 | 3 | Minimum number of coins |
 | 4 | Knapsack 0/1 |
 | 5 | Levenshtein Distance | 
+| 6 | Minimum change you cannot make |
+
+#### Notes
+- Base case
+- Start from minimum
+- What to do at each step? how do we update?
 
 ### Divide & Conquer 
 | # | Problem |
@@ -192,6 +198,8 @@ Purely for educational purpose and not intended for any other use.
 | --- | --- | --- |
 | 1 | Off by one error | 1 |
 | 2 | Input validation (Checks for empty) | 1 |
+| 3 | Improper initialization values | 1 |
+| 4 | Incompletely updating temporary variables | 1 |
 
 ## TO-DO
 - Implement the tree traversals (recursive & iterative in a separate file)
