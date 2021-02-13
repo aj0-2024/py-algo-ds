@@ -85,7 +85,7 @@ Purely for educational purpose and not intended for any other use.
 ## Algorithm Review Table
 | # | Algorithm | Num Reviewed | 
 | -- | -- | -- |
-| 1 | Searching | 3 |
+| 1 | Searching | 4 |
 | 2 | Basic Sorting | 3 |
 | 3 | Dynamic Programming | 3 |
 | 4 | Divide & Conquer | 2 |
