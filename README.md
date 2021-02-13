@@ -94,8 +94,13 @@ Purely for educational purpose and not intended for any other use.
 | 7 | Greedy Approach | 2 |
 | 8 | Matrix Problems | 1 |
 | 9 | Array Problems | 0 |
-| 10 | Tree Problems | 0 |
+| 10 | Tree Problems | 1 |
 | 11 | Geometry Problems | 0 |
+| 12 | Bit manipulation Problems | 1 |
+| 13 | String Problems | 0 |
+| 14 | Probability Problems | 0 |
+| 15 | Graph Problems | 0 |
+| 16 | Math Problems | 0 |
 
 ## Data structure review table
 | # | Data Structure | Num Reviewed |
@@ -148,6 +153,7 @@ Purely for educational purpose and not intended for any other use.
 | 4 | Knapsack 0/1 |
 | 5 | Levenshtein Distance | 
 | 6 | Minimum change you cannot make |
+| 7 | Staircase Traversal |
 
 #### Notes
 - Base case
@@ -168,6 +174,8 @@ Purely for educational purpose and not intended for any other use.
 | 2 | Highest product of 3 |
 | 3 | Product of all other numbers |
 | 4 | Sunset Views |
+| 5 | Merging meeting time |
+| 6 | Apple Stocks |
 
 ### Matrix Problems
 | # | Problem |
@@ -182,24 +190,62 @@ Purely for educational purpose and not intended for any other use.
 | 2 | Merge meeting times |
 | 3 | Reverse string in place |
 | 4 | Reverse words in place |
+| 5 | Longest Peak |
+
+### String Problems 
+| # | Problem |
+| --- | --- |
+| 1 | String Permutation |
+| 2 | Word Cloud |
 
 ### Tree Problems
 | # | Problem |
 | --- | --- |
 | 1 | Youngest common ancestor |
+| 2 | Valid Binary Search Tree |
+| 3 | Second Largest Item in BST |
+| 4 | Find closeset value in BST |
+| 5 | Calculate Branch Sums |
+| 6 | Calculate Node Depths |
+| 7 | Min-Height BST |
+| 8 | Invert Binary Tree |
+| 9 | Binary Tree Diameter |
 
 ### Geometry Problems
 | # | Problem |
 | --- | --- |
 | 1 | Recentagle interception problem |
 
-### Common Mistakes
+### Bit Manipulation Problems
+| # | Problem |
+| --- | --- |
+| 1 | Drone problem |
+
+### Probability Problems |
+| # | Problem |
+| --- | --- |
+| 1 | In-Place Shuffle |
+| 2 | 5-Sided die & 7-Sided die |
+
+### Graph Problems
+| # | Problem |
+| --- | --- |
+| 1 | Graph Coloring |
+| 2 | Mesh Message |
+
+### Math Problems
+| # | Problem |
+| --- | --- |
+| 1 | Two Egg Problem |
+
+## Common Mistakes
 | # | Description | Num times |
 | --- | --- | --- |
 | 1 | Off by one error | 1 |
 | 2 | Input validation (Checks for empty) | 1 |
 | 3 | Improper initialization values | 1 |
 | 4 | Incompletely updating temporary variables | 1 |
+| 5 | Improper Input Validation | 1 |
 
 ## TO-DO
 - Implement the tree traversals (recursive & iterative in a separate file)

@@ -4,7 +4,7 @@ the most important concepts in computer science."""
 import unittest
 from typing import List
 
-def num_ways_of_making_change(amount: Int, coins: List[Int]):
+def num_ways_of_making_change(amount: int, coins: List[int]):
     """Here amount represents the desired monetary value and coins is the denominations"""
 
     # Our approach uses bottom-up dynamic programming
@@ -14,20 +14,24 @@ def num_ways_of_making_change(amount: Int, coins: List[Int]):
     # Initialize the data structure we will use to store all possible amounts 
     # we initialize all amounts to 0 first
     # we add 1 because our base case is making 0 amount
-    num_ways_of_making_amount = [0] * (amount + 1)
+    num_ways = [0] * (amount + 1)
 
     # there is only one way to make 0 change, this is our base case
     # TODO: Figure out why this is?
-    num_ways_of_making_amount[0] = 1
+    num_ways[0] = 1
 
     for coin in coins:
 
         # We loop from making the lowest possible value to the required value
         # amount + 1 since we want the for loop to run until amount
         for net_amount in range(1, amount + 1):
-            num_ways_of_making_amount += num_ways_of_making_amount[net_amount - coin]
+            if coin <= net_amount:
+                num_ways[net_amount] += num_ways[net_amount - coin]
 
-    rerturn num_ways_of_making_amount[amount]
+        print(num_ways)
+
+    return num_ways[amount]
 
 if __name__ == "__main__":
-    unittest.main()
+    print(num_ways_of_making_change(4, [1, 2]))
+    
