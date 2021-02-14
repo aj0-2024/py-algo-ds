@@ -87,7 +87,7 @@ Purely for educational purpose and not intended for any other use.
 | -- | -- | -- |
 | 1 | Searching | 4 |
 | 2 | Basic Sorting | 3 |
-| 3 | Dynamic Programming | 3 |
+| 3 | Dynamic Programming | 4 |
 | 4 | Divide & Conquer | 2 |
 | 5 | Recursion | 1 |
 | 6 | Iteration | 0 |
@@ -246,6 +246,8 @@ Purely for educational purpose and not intended for any other use.
 | 3 | Improper initialization values | 1 |
 | 4 | Incompletely updating temporary variables | 1 |
 | 5 | Improper Input Validation | 1 |
+| 6 | Sending wrong arguements or in a wrong order | 1 |
+| 7 | Infinite while loops | 1 |
 
 ## TO-DO
 - Implement the tree traversals (recursive & iterative in a separate file)
