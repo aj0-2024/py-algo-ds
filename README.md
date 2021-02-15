@@ -91,16 +91,17 @@ Purely for educational purpose and not intended for any other use.
 | 4 | Divide & Conquer | 2 |
 | 5 | Recursion | 1 |
 | 6 | Iteration | 0 |
-| 7 | Greedy Approach | 2 |
+| 7 | Greedy Approach | 3 |
 | 8 | Matrix Problems | 1 |
 | 9 | Array Problems | 0 |
 | 10 | Tree Problems | 1 |
 | 11 | Geometry Problems | 0 |
-| 12 | Bit manipulation Problems | 1 |
+| 12 | Bit manipulation Problems | 2 |
 | 13 | String Problems | 0 |
 | 14 | Probability Problems | 0 |
 | 15 | Graph Problems | 0 |
 | 16 | Math Problems | 0 |
+| 17 | Sliding Window Problems | 0 |
 
 ## Data structure review table
 | # | Data Structure | Num Reviewed |
@@ -138,6 +139,9 @@ Purely for educational purpose and not intended for any other use.
 | 4 | Permutations |
 | 5 | Powerset |
 | 6 | Towers of hanoi |
+
+#### Notes
+- Runtime complexity = O(k ^ n) where k = number of branches per each call.
 
 ### Iteration
 | # | Problem |
@@ -197,6 +201,8 @@ Purely for educational purpose and not intended for any other use.
 | --- | --- |
 | 1 | String Permutation |
 | 2 | Word Cloud |
+| 3 | Longest Palindrome String |
+| 4 | Group Anagrams |
 
 ### Tree Problems
 | # | Problem |
@@ -238,10 +244,15 @@ Purely for educational purpose and not intended for any other use.
 | --- | --- |
 | 1 | Two Egg Problem |
 
+### Sliding Window Problems 
+| # | Problem |
+| --- | --- |
+| 1 | Staircase Traversal |
+
 ## Common Mistakes
 | # | Description | Num times |
 | --- | --- | --- |
-| 1 | Off by one error | 1 |
+| 1 | Off by one error | 2 |
 | 2 | Input validation (Checks for empty) | 1 |
 | 3 | Improper initialization values | 1 |
 | 4 | Incompletely updating temporary variables | 1 |
