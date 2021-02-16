@@ -87,7 +87,7 @@ Purely for educational purpose and not intended for any other use.
 | -- | -- | -- |
 | 1 | Searching | 4 |
 | 2 | Basic Sorting | 3 |
-| 3 | Dynamic Programming | 4 |
+| 3 | Dynamic Programming | 5 |
 | 4 | Divide & Conquer | 2 |
 | 5 | Recursion | 1 |
 | 6 | Iteration | 0 |
@@ -156,8 +156,7 @@ Purely for educational purpose and not intended for any other use.
 | 3 | Minimum number of coins |
 | 4 | Knapsack 0/1 |
 | 5 | Levenshtein Distance | 
-| 6 | Minimum change you cannot make |
-| 7 | Staircase Traversal |
+| 6 | Staircase Traversal |
 
 #### Notes
 - Base case
@@ -195,6 +194,7 @@ Purely for educational purpose and not intended for any other use.
 | 3 | Reverse string in place |
 | 4 | Reverse words in place |
 | 5 | Longest Peak |
+| 6 | Minimum change you cannot make |
 
 ### String Problems 
 | # | Problem |
@@ -203,6 +203,7 @@ Purely for educational purpose and not intended for any other use.
 | 2 | Word Cloud |
 | 3 | Longest Palindrome String |
 | 4 | Group Anagrams |
+| 5 | IP Addresses |
 
 ### Tree Problems
 | # | Problem |
@@ -249,6 +250,13 @@ Purely for educational purpose and not intended for any other use.
 | --- | --- |
 | 1 | Staircase Traversal |
 
+## Complex Run-time analysis
+| # | Problem Set |
+| --- | --- |
+| 1 | String Problems |
+| 2 | Graph Problems |
+| 3 | Dynamic Programming |
+
 ## Common Mistakes
 | # | Description | Num times |
 | --- | --- | --- |
@@ -259,6 +267,14 @@ Purely for educational purpose and not intended for any other use.
 | 5 | Improper Input Validation | 1 |
 | 6 | Sending wrong arguements or in a wrong order | 1 |
 | 7 | Infinite while loops | 1 |
+| 8 | Understanding the question wrong | 1 |
+| 9 | Not considering that array may have duplicate numbers within range | 1 |
+
+## Unique looping problems
+| # | Problem | Description |
+| --- | --- |
+| 1 | Valid IP addresses from a string | Looping based on groups of 4 |
+| 2 | Four Number Sum | Two inner loops ...i and i... which do different things |
 
 ## TO-DO
 - Implement the tree traversals (recursive & iterative in a separate file)

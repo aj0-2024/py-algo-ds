@@ -32,6 +32,14 @@ def num_ways_of_making_change(amount: int, coins: List[int]):
 
     return num_ways[amount]
 
+class TestMakingChange(unittest.TestCase):
+
+    def test_1(self):
+        self.assertEqual(
+            num_ways_of_making_change(4, [1, 2]),
+            3
+        )
+
 if __name__ == "__main__":
-    print(num_ways_of_making_change(4, [1, 2]))
+    unittest.main()
     
