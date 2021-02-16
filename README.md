@@ -250,6 +250,11 @@ Purely for educational purpose and not intended for any other use.
 | --- | --- |
 | 1 | Staircase Traversal |
 
+### Traversal Problems
+| # | Problem |
+| --- | --- |
+| 1 | Zigzag Traversal |
+
 ## Complex Run-time analysis
 | # | Problem Set |
 | --- | --- |
