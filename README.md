@@ -139,6 +139,7 @@ Purely for educational purpose and not intended for any other use.
 | 4 | Permutations |
 | 5 | Powerset |
 | 6 | Towers of hanoi |
+| 7 | Max path sum of a Binary tree |
 
 #### Notes
 - Runtime complexity = O(k ^ n) where k = number of branches per each call.
@@ -217,6 +218,7 @@ Purely for educational purpose and not intended for any other use.
 | 7 | Min-Height BST |
 | 8 | Invert Binary Tree |
 | 9 | Binary Tree Diameter |
+| 10 | Max path sum |
 
 ### Geometry Problems
 | # | Problem |
