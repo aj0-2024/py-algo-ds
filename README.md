@@ -94,7 +94,7 @@ Purely for educational purpose and not intended for any other use.
 | 7 | Greedy Approach | 3 |
 | 8 | Matrix Problems | 1 |
 | 9 | Array Problems | 0 |
-| 10 | Tree Problems | 1 |
+| 10 | Tree Problems | 2 |
 | 11 | Geometry Problems | 0 |
 | 12 | Bit manipulation Problems | 2 |
 | 13 | String Problems | 0 |
@@ -158,6 +158,10 @@ Purely for educational purpose and not intended for any other use.
 | 4 | Knapsack 0/1 |
 | 5 | Levenshtein Distance | 
 | 6 | Staircase Traversal |
+| 7 | Max Sum Increasing Subsequence |
+
+#### Notes
+- Often slower, a faster but less accurate algorithm may exist.
 
 #### Notes
 - Base case
@@ -180,6 +184,10 @@ Purely for educational purpose and not intended for any other use.
 | 4 | Sunset Views |
 | 5 | Merging meeting time |
 | 6 | Apple Stocks |
+
+#### Notes
+- Not always accurate so be careful.
+- Next step to consider is Dynamic Programming.
 
 ### Matrix Problems
 | # | Problem |
