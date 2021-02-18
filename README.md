@@ -163,6 +163,12 @@ Purely for educational purpose and not intended for any other use.
 
 #### Notes
 - Often slower, a faster but less accurate algorithm may exist.
+- Always depends on a formula to calculate curr value based on previous values. If you have the 
+formula, you can write the code for it.
+- In some cases, sliding window approach might lead to an optimized algorithm.
+- To reduce space, figure out ways to keep only the required values as you go.
+- In some cases, A greedy approach can provide an optimized solution. But make sure it works by
+going through several test cases.
 
 #### Notes
 - Base case
@@ -185,6 +191,7 @@ Purely for educational purpose and not intended for any other use.
 | 4 | Sunset Views |
 | 5 | Merging meeting time |
 | 6 | Apple Stocks |
+| 7 | Water Area |
 
 #### Notes
 - Not always accurate so be careful.
