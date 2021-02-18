@@ -101,7 +101,7 @@ Purely for educational purpose and not intended for any other use.
 | 14 | Probability Problems | 0 |
 | 15 | Graph Problems | 0 |
 | 16 | Math Problems | 0 |
-| 17 | Sliding Window Problems | 0 |
+| 17 | Sliding Window Problems | 1 |
 
 ## Data structure review table
 | # | Data Structure | Num Reviewed |
@@ -150,15 +150,16 @@ Purely for educational purpose and not intended for any other use.
 | 1 | In order traversal |
 
 ### Dynamic Programming 
-| # | Problem |
-| --- | --- |
-| 1 | Fibonacci series |
-| 2 | Making change with denominations |
-| 3 | Minimum number of coins |
-| 4 | Knapsack 0/1 |
-| 5 | Levenshtein Distance | 
-| 6 | Staircase Traversal |
-| 7 | Max Sum Increasing Subsequence |
+| # | Problem | Notes |
+| --- | --- | --- | 
+| 1 | Fibonacci series | --- | 
+| 2 | Making change with denominations | --- |
+| 3 | Minimum number of coins | --- |
+| 4 | Knapsack 0/1 | --- |
+| 5 | Levenshtein Distance | --- |
+| 6 | Staircase Traversal | --- |
+| 7 | Max Sum Increasing Subsequence | --- |
+| 8 | Longest Common Subsequence | Complex runtime analysis |
 
 #### Notes
 - Often slower, a faster but less accurate algorithm may exist.
@@ -265,7 +266,14 @@ Purely for educational purpose and not intended for any other use.
 | --- | --- |
 | 1 | Zigzag Traversal |
 
-## Complex Run-time analysis
+## Build sequence Problems
+| # | Problem |
+| --- | --- |
+| 1 | Mesh Message |
+| 2 | Maximum subsequence sum |
+| 3 | Longest common subsequence |
+
+## Complex Runtime analysis
 | # | Problem Set |
 | --- | --- |
 | 1 | String Problems |
@@ -284,6 +292,7 @@ Purely for educational purpose and not intended for any other use.
 | 7 | Infinite while loops | 1 |
 | 8 | Understanding the question wrong | 1 |
 | 9 | Not considering that array may have duplicate numbers within range | 1 |
+| 10 | Sending wrong values in array iteration, or in wrong order | 1 |
 
 ## Unique looping problems
 | # | Problem | Description |

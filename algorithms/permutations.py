@@ -57,7 +57,9 @@ def get_permutations_2(string_given):
 class TestPermutations(unittest.TestCase):
 
     def test_1(self):
-        print(get_permutations_2("cat"))
+        perms = get_permutations_2("flour")
+        for perm in perms:
+            print(perm)
         
 
 if __name__ == "__main__":
