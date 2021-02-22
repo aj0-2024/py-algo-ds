@@ -102,15 +102,20 @@ Purely for educational purpose and not intended for any other use.
 | 15 | Graph Problems | 0 |
 | 16 | Math Problems | 0 |
 | 17 | Sliding Window Problems | 1 |
+| 18 | Linked List Problems | 0 |
+| 19 | Heap Problems | 0 |
 
 ## Data structure review table
 | # | Data Structure | Num Reviewed |
 | -- | -- | -- |
-| 1 | Binary Search Tree | 0 |
-| 2 | Linked List | 0 |
-| 3 | Stack | 0 |
-| 4 | Queue | 0 |
-| 6 | Heap | 0 |
+| 1 | Construct Binary Search Tree & Balance It | 0 |
+| 2 | Construct Linked List | 0 |
+| 3 | Construct Stack | 0 |
+| 4 | Construct Queue | 0 |
+| 6 | Construct Heap | 0 |
+| 7 | Construct a Trie | 0 |
+| 8 | Construct AVL tree | 0 |
+| 9 | Construct Red-Black tree | 0 |
 
 ## Categories
 
@@ -155,13 +160,17 @@ Purely for educational purpose and not intended for any other use.
 | 1 | Fibonacci series | --- | 
 | 2 | Making change with denominations | --- |
 | 3 | Minimum number of coins | --- |
-| 4 | Knapsack 0/1 | --- |
+| 4 | Cake Thief | --- |
 | 5 | Levenshtein Distance | --- |
 | 6 | Staircase Traversal | --- |
 | 7 | Max Sum Increasing Subsequence | --- |
 | 8 | Longest Common Subsequence | Complex runtime analysis |
+| 9 | Knapsack Problem | --- |
+| 10 | Disk Stacking | --- |
 
 #### Notes
+- Dynamic programming is all about incrementally building the final answer by starting from the bottom
+or the base case to the answer. We also store values in memory to avoid recomputation.
 - Often slower, a faster but less accurate algorithm may exist.
 - Always depends on a formula to calculate curr value based on previous values. If you have the 
 formula, you can write the code for it.
@@ -169,6 +178,17 @@ formula, you can write the code for it.
 - To reduce space, figure out ways to keep only the required values as you go.
 - In some cases, A greedy approach can provide an optimized solution. But make sure it works by
 going through several test cases.
+
+#### Approach
+- Start with a table with a range of expected output and input (or) if comparing two items, have
+each item build gradually in row and column. In some cases your table is flat 1D.
+- Get the base case (string - empty etc)
+- Dynamic programming works by starting and incrementally solving the problem from the base case.
+(Bottom up programming).
+- Now write out the output for each cell and figure out the formula. Usually invovles maxes, mins 
+and curr value.
+- Once you have the formula it should be straight forward to implement code.
+- If you need to back track, save pointers and values along with output so far in your table.
 
 #### Notes
 - Base case
@@ -235,6 +255,9 @@ going through several test cases.
 | 8 | Invert Binary Tree |
 | 9 | Binary Tree Diameter |
 | 10 | Max path sum |
+| 11 | Find kth largest number in BST |
+| 12 | Construct BST from in-order traversal |
+| 13 | Height balanced Binary Tree |
 
 ### Geometry Problems
 | # | Problem |
@@ -253,15 +276,22 @@ going through several test cases.
 | 2 | 5-Sided die & 7-Sided die |
 
 ### Graph Problems
-| # | Problem |
-| --- | --- |
-| 1 | Graph Coloring |
-| 2 | Mesh Message |
+| # | Problem | Notes |
+| --- | --- | --- |
+| 1 | Graph Coloring | --- |
+| 2 | Mesh Message | Back tracking |
+| 3 | Topological sort | Sort jobs based on dependencies |
+| 4 | Boggle Board | Using a trie to solve the problem |
+| 5 | Number of ways to traverse graph | -- |
+
+#### Notes
+- It's easy to make a mistake of drawing the wrong kind of graph (wrong edges if directed).
 
 ### Math Problems
 | # | Problem |
 | --- | --- |
 | 1 | Two Egg Problem |
+| 2 | Finding the number of ways to reach end from start in a graph |
 
 ### Sliding Window Problems 
 | # | Problem |
@@ -272,6 +302,17 @@ going through several test cases.
 | # | Problem |
 | --- | --- |
 | 1 | Zigzag Traversal |
+
+### Linked List Problems
+| # | Problem |
+| --- | --- |
+| 1 | Find loop, length and return first node |
+| 2 | Reverse a linked list | 
+
+### Heap Problems 
+| # | Problem |
+| --- | --- |
+| 1 | Continuous Median |
 
 ## Build sequence Problems
 | # | Problem |
@@ -287,10 +328,15 @@ going through several test cases.
 | 2 | Graph Problems |
 | 3 | Dynamic Programming |
 
-## Common Mistakes
+### Review Problems for runtime analysis
+| # | Name |
+| --- | --- |
+| 1 | Boggle Board |
+
+## Errors, Mistakes
 | # | Description | Num times |
 | --- | --- | --- |
-| 1 | Off by one error | 2 |
+| 1 | Off by one error (Easy to miss) | 4 |
 | 2 | Input validation (Checks for empty) | 1 |
 | 3 | Improper initialization values | 1 |
 | 4 | Incompletely updating temporary variables | 1 |
@@ -300,12 +346,30 @@ going through several test cases.
 | 8 | Understanding the question wrong | 1 |
 | 9 | Not considering that array may have duplicate numbers within range | 1 |
 | 10 | Sending wrong values in array iteration, or in wrong order | 1 |
+| 11 | Drawing the wrong edges in a graph | 1 |
+| 12 | Incorrectly reading question, wrong assumptions | 1 |
+| 13 | Boolean testing in the opposite way (EX: `not` instead of truthy) | 1 |
+| 14 | Referencing variables before assignment | 1 |
+| 15 | Index out of bounds error (Forgetting to check for bounds in while loops) | 2 |
+| 16 | referencing methods without the `_` usually given to private methods | 3 |
+| 17 | Incorrectly updating or using index variables in loops | 1 |
+| 18 | Forgetting to back track path in a search (tree, graph) | 2 |
 
 ## Unique looping problems
 | # | Problem | Description |
-| --- | --- |
+| --- | --- | --- |
 | 1 | Valid IP addresses from a string | Looping based on groups of 4 |
 | 2 | Four Number Sum | Two inner loops ...i and i... which do different things |
+
+## Tips
+
+### While loops
+- Check for out of bound errors within the loop.
+- Check for early termination.
+- There should be an update every loop - no updates in a particular loop will lead to an infinite loop.
+
+### BFS & DFS
+- do not use .pop() too early, only when it makes sense.
 
 ## TO-DO
 - Implement the tree traversals (recursive & iterative in a separate file)
