@@ -13,32 +13,36 @@ References:
 """
 import unittest
 
-def partition_and_arrange(sequence, start, end):
-    """Divide the list into two and move elements around pivot"""
+def rearrange_with_pivot(array, start, end):
+    """move elements around pivot"""
 
-    pivot = sequence[start]
-    low = start + 1
-    high = end
+    pivot = start
+    left = start + 1
+    right = end
 
     # arrage in such a way that lowest are below pivot
     # and highest are above pivot
-    while True:
-        while low <= high and sequence[high] >= pivot:
-            high = high - 1
+    while left <= right:
+        
+        # if out of order swap (smaller should be left, bigger should be right)
+        if array[left] > array[pivot] and array[right] < array[pivot]:
+            swap(array, left, right)
 
-        while low <= high and sequence[low] <= pivot:
-            low = low + 1
+        # move forward until out of order
+        if array[left] <= array[pivot]:
+            left += 1
 
-        if low <= high:
-            sequence[low], sequence[high] = sequence[high], sequence[low]
-        else:
-            break
+        # move backward until out of order
+        if array[right] >= array[pivot]:
+            right -= 1
 
-    # since the pivot is at the start, swap [start] & [high]
-    # switch this if you want to change the pivot
-    sequence[start], sequence[high] = sequence[high], sequence[start]
+    # after rearranging, put pivot in its place
+    swap(array, pivot, right)
 
-    return high
+    return right
+
+def swap(array, i, j):
+    array[i], array[j] = array[j], array[i]
 
 def quick_sort(sequence, start, end):
     """Perform quick sort on the sequence in place"""
@@ -46,7 +50,7 @@ def quick_sort(sequence, start, end):
     if start >= end:
         return sequence
 
-    mid = partition_and_arrange(sequence, start, end)
+    mid = rearrange_with_pivot(sequence, start, end)
     quick_sort(sequence, start, mid - 1)
     quick_sort(sequence, mid + 1, end)
 
@@ -57,6 +61,10 @@ class TestQuickSort(unittest.TestCase):
     def test_empty(self):
         sequence = []
         self.assertEqual(quick_sort(sequence, 0, 0), [])
+
+    def test_1(self):
+        sequence = [4, 2, 3, 1, 2, 4]
+        self.assertEqual(quick_sort(sequence, 0, len(sequence) -1), [1, 2, 2, 3, 4, 4])
 
     def test_basic_case(self):
         sequence = [ 5, 4, 3, 2, 1 ]

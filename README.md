@@ -57,6 +57,7 @@ Purely for educational purpose and not intended for any other use.
 | 32 | Find Rotation Point | 𐄂 |
 | 33 | Find Duplicate Integer | ✔︎ |
 | 34 | Towers of Hanoi | ✔︎ |
+| 34 | Word Search | ✔︎ |
 
 ## Data structures Status Table
 
@@ -86,7 +87,7 @@ Purely for educational purpose and not intended for any other use.
 | # | Algorithm | Num Reviewed | 
 | -- | -- | -- |
 | 1 | Searching | 4 |
-| 2 | Basic Sorting | 3 |
+| 2 | Sorting | 3 |
 | 3 | Dynamic Programming | 5 |
 | 4 | Divide & Conquer | 2 |
 | 5 | Recursion | 1 |
@@ -104,6 +105,10 @@ Purely for educational purpose and not intended for any other use.
 | 17 | Sliding Window Problems | 1 |
 | 18 | Linked List Problems | 0 |
 | 19 | Heap Problems | 0 |
+| 20 | Trie Problems | 0 |
+| 21 | Path finding algorithms | 0 |
+| 22 | Backtracking problems | 0 |
+| 23 | Geometry Problems | 0 |
 
 ## Data structure review table
 | # | Data Structure | Num Reviewed |
@@ -112,28 +117,50 @@ Purely for educational purpose and not intended for any other use.
 | 2 | Construct Linked List | 0 |
 | 3 | Construct Stack | 0 |
 | 4 | Construct Queue | 0 |
-| 6 | Construct Heap | 0 |
-| 7 | Construct a Trie | 0 |
-| 8 | Construct AVL tree | 0 |
-| 9 | Construct Red-Black tree | 0 |
+| 5 | Construct Heap | 0 |
+| 6 | Construct a Trie | 0 |
+| 7 | Construct LRU Cache | 0 |
+
+### To learn
+| # | Data Structure |
+| --- | --- |
+| 1 | Construct AVL tree | 0 |
+| 2 | Construct Red-Black tree | 0 |
 
 ## Categories
+
+### Geometry Problems
+| # | Problem |
+| --- | --- |
+| 1 | Square of zeros |
+| 2 | Rectangle Mania |
 
 ### Searching 
 | # | Problem |
 | --- | --- |
 | 1 | Binary Search |
-| 2 | Depth First Search |
-| 3 | Breadth First Search |
-| 4 | Matrix Search |
+| 2 | Matrix Search |
+| 3 | Shifted binary search |
+| 4 | Search for range |
 
-### Basic Sorting
+### Path finding algorithms |
+| # | Problem |
+| --- | --- |
+| 1 | Path finding with depth first search |
+| 2 | Path finding with breadth first search |
+| 3 | Path finding using A\* search |
+| 4 | Path finding using Dijkstra's algorithm |
+
+### Sorting
 | # | Problem |
 | --- | --- |
 | 1 | Bubble Sort |
 | 2 | Insertion Sort |
 | 3 | Selection Sort |
-
+| 4 | Quick Sort |
+| 5 | Heap Sort |
+| 6 | Merge Sort |
+| 7 | Topological sort |
 
 ### Recursion 
 | # | Problem |
@@ -145,9 +172,19 @@ Purely for educational purpose and not intended for any other use.
 | 5 | Powerset |
 | 6 | Towers of hanoi |
 | 7 | Max path sum of a Binary tree |
+| 8 | Minimax algorithm |
 
 #### Notes
 - Runtime complexity = O(k ^ n) where k = number of branches per each call.
+- Identify all repeating patterns. This is the key step.
+- Steps
+    - Pick a simple case (Not too complex, a step above base case Ex: 3 node tree)
+    - What should happen at each step? (involves splitting work and merging it back)
+    - What is the base case?
+- To implement recursion as iterative solutions, use a stack. 
+    - The stack should probably hold more than one value per iteration.
+    - pop() only when needed and peek() first.
+    - Order of instructions is very important.
 
 ### Iteration
 | # | Problem |
@@ -167,6 +204,9 @@ Purely for educational purpose and not intended for any other use.
 | 8 | Longest Common Subsequence | Complex runtime analysis |
 | 9 | Knapsack Problem | --- |
 | 10 | Disk Stacking | --- |
+| 11 | Max profit with k transactions | --- |
+| 12 | Palindrome Partioning Min Cuts | --- |
+| 13 | Longest increasing subsequence | --- |
 
 #### Notes
 - Dynamic programming is all about incrementally building the final answer by starting from the bottom
@@ -199,8 +239,7 @@ and curr value.
 | # | Problem |
 | --- | --- |
 | 1 | Maximum subarray problem |
-| 2 | Quick sort |
-| 3 | Merge sort |
+| 2 | Longest increasing subsequence |
 
 ### Greedy approach
 | # | Problem |
@@ -212,10 +251,11 @@ and curr value.
 | 5 | Merging meeting time |
 | 6 | Apple Stocks |
 | 7 | Water Area |
+| 8 | Longest substring without repeating chars |
 
 #### Notes
 - Not always accurate so be careful.
-- Next step to consider is Dynamic Programming.
+- Subset of dynamic programming.
 
 ### Matrix Problems
 | # | Problem |
@@ -232,6 +272,9 @@ and curr value.
 | 4 | Reverse words in place |
 | 5 | Longest Peak |
 | 6 | Minimum change you cannot make |
+| 7 | Quickselect |
+| 8 | Calendar matching |
+| 9 | Right smaller than |
 
 ### String Problems 
 | # | Problem |
@@ -241,6 +284,23 @@ and curr value.
 | 3 | Longest Palindrome String |
 | 4 | Group Anagrams |
 | 5 | IP Addresses |
+| 6 | Underscorify Substring |
+| 7 | Pattern matcher |
+| 8 | Longest Common Subsequence |
+| 9 | Longest Substring without duplication |
+| 10 | Underscorify Substring |
+| 11 | Pattern Matcher |
+| 12 | Multi String Search |
+| 13 | Interweaving Strings |
+| 14 | Reverse words in a string |
+| 15 | Longest string chain |
+| 16 | Knuth-Morris-Pratt algorithm | 
+
+#### Notes
+- Do not assume that substring patterns start at 0, they can start anywhere.
+- Get used to testing strings and algorithm by hand.
+- Understanding the question is important, write test cases first.
+- Usually involves building a 2D array and comparision.
 
 ### Tree Problems
 | # | Problem |
@@ -258,6 +318,17 @@ and curr value.
 | 11 | Find kth largest number in BST |
 | 12 | Construct BST from in-order traversal |
 | 13 | Height balanced Binary Tree |
+| 14 | Lowest common manager |
+| 15 | Same BSTs |
+| 16 | Nodes at distance k |
+| 17 | Iterative in-order traversal |
+| 18 | Flatten Binary Tree |
+| 19 | Sum of all node depths |
+| 20 | Number of binary tree topologies |
+| 21 | Finding the minimum spanning tree |
+
+#### Notes
+- If it's a binary search tree problem, think of a solution with min and max values so far.
 
 ### Geometry Problems
 | # | Problem |
@@ -278,11 +349,13 @@ and curr value.
 ### Graph Problems
 | # | Problem | Notes |
 | --- | --- | --- |
-| 1 | Graph Coloring | --- |
-| 2 | Mesh Message | Back tracking |
+| 1 | Graph Coloring | Determine if k colors are enough to color the vertices  |
+| 2 | Mesh Message | using backtracking to build path |
 | 3 | Topological sort | Sort jobs based on dependencies |
 | 4 | Boggle Board | Using a trie to solve the problem |
 | 5 | Number of ways to traverse graph | -- |
+| 6 | Airport Connections | -- |
+| 7 | Bridges of Konigsberg | -- |
 
 #### Notes
 - It's easy to make a mistake of drawing the wrong kind of graph (wrong edges if directed).
@@ -292,6 +365,8 @@ and curr value.
 | --- | --- |
 | 1 | Two Egg Problem |
 | 2 | Finding the number of ways to reach end from start in a graph |
+| 3 | Knight's tour (4x4) |
+| 4 | Magic sqaure |
 
 ### Sliding Window Problems 
 | # | Problem |
@@ -308,11 +383,32 @@ and curr value.
 | --- | --- |
 | 1 | Find loop, length and return first node |
 | 2 | Reverse a linked list | 
+| 3 | Rotate/Shift a linked list |
+| 4 | Rearrange linked list |
+| 5 | Linked List Palindrome |
+
+#### Notes
+- Dangling pointers are the cause of problems, be sure to disconnect.
 
 ### Heap Problems 
 | # | Problem |
 | --- | --- |
 | 1 | Continuous Median |
+
+### Trie Problems
+| # | Problem |
+| --- | --- |
+| 1 | Multi String Search |
+
+### Backtracking problems
+| # | Problem | Notes |
+| --- | --- | --- |
+| 1 | Solving sudoku | --- |
+| 2 | N Queens puzzle | Place N Queens so that no queens attacks another |
+| 3 | Flight itenerary problem | --- |
+| 4 | Map coloring problem | Given k colors, assign them to n regions of a map |
+| 5 | SEND+MORE=MONEY | Replace letters with digits to satisfy the equation |
+| 6 | Circuit board layout | Fit rectangles inside rectangles |
 
 ## Build sequence Problems
 | # | Problem |
@@ -321,6 +417,7 @@ and curr value.
 | 2 | Maximum subsequence sum |
 | 3 | Longest common subsequence |
 
+
 ## Complex Runtime analysis
 | # | Problem Set |
 | --- | --- |
@@ -328,32 +425,84 @@ and curr value.
 | 2 | Graph Problems |
 | 3 | Dynamic Programming |
 
+## Edge case questions (Questions with lots of edge cases)
+| # | Problem set |
+| --- | --- |
+| 1 | Shorten Path |
+| 2 | Word Cloud |
+| 3 | Roman numerals |
+| 4 | Calendar Matching |
+
 ### Review Problems for runtime analysis
 | # | Name |
 | --- | --- |
 | 1 | Boggle Board |
 
-## Errors, Mistakes
-| # | Description | Num times |
-| --- | --- | --- |
-| 1 | Off by one error (Easy to miss) | 4 |
-| 2 | Input validation (Checks for empty) | 1 |
-| 3 | Improper initialization values | 1 |
-| 4 | Incompletely updating temporary variables | 1 |
-| 5 | Improper Input Validation | 1 |
-| 6 | Sending wrong arguements or in a wrong order | 1 |
-| 7 | Infinite while loops | 1 |
-| 8 | Understanding the question wrong | 1 |
-| 9 | Not considering that array may have duplicate numbers within range | 1 |
-| 10 | Sending wrong values in array iteration, or in wrong order | 1 |
-| 11 | Drawing the wrong edges in a graph | 1 |
-| 12 | Incorrectly reading question, wrong assumptions | 1 |
-| 13 | Boolean testing in the opposite way (EX: `not` instead of truthy) | 1 |
-| 14 | Referencing variables before assignment | 1 |
-| 15 | Index out of bounds error (Forgetting to check for bounds in while loops) | 2 |
-| 16 | referencing methods without the `_` usually given to private methods | 3 |
-| 17 | Incorrectly updating or using index variables in loops | 1 |
-| 18 | Forgetting to back track path in a search (tree, graph) | 2 |
+## Most Common Errors 
+
+### Off by one error
+- 
+
+### Understanding the question wrong or failing to get complete requirements
+- Writing the test cases and discussing with interviewers helps here.
+
+### Infinite while loops
+- Missed updating the index in certain condition (using a cursor instead of to_visit).
+- Missed tracking visited in a graph which can cause loops.
+
+
+## Errors Stats
+|  Description | Num times 
+| --- | --- | 
+| Off by one error | 23 | 
+| Understanding the question wrong | 11 |
+| Infinite while loops (miss updating the index, missed tracking visited) | 14 |
+| Index out of bounds error (Forgetting to check for bounds in while loops, if conditions and for loops) | 10 |
+| Input or 3rd party library result validation (Checks for empty, in inner functions as well as main) | 5 |
+| Editing an incomplete or unfinished code leading to a cascade of errors | 4 |
+| Improper initialization values (None instead of infinities) | 3 |
+| Incompletely updating temporary variables or replacing with None (if conditions etc) | 3 |
+| Assuming the intended pattern starts only a 0, it can start anywhere in between | 3 |
+| referencing methods without the `_` usually given to private methods | 3 |
+| Forgetting to back track path in a search (tree, graph) | 2 |
+| Comparision b/w None and numbers, initialize with "inf" or "-inf" | 2 |
+| Forgetting to cover all cases for if conditions | 2 |
+| Append takes only one argument | 2 |
+| Spelling mistakes while writing variable names | 2 |
+| Sending wrong arguments or in a wrong order | 2 |
+| Not considering that array may have duplicate numbers within range | 1 |
+| Sending wrong values in array iteration, or in wrong order | 1 |
+| Drawing the wrong edges in a graph | 1 |
+| Incorrectly reading question, wrong assumptions | 1 |
+| Boolean testing in the opposite way (EX: `not` instead of truthy) | 1 |
+| Referencing variables before assignment | 1 |
+| Incorrectly updating or using index variables in loops | 1 |
+| Not checking if hash table does not have a key (It raises an exception) | 1 |
+| Comparision at the wrong depth when dealing with 2D arrays or datastructures | 1 |
+| Forgetting to consider how we use input (Ex: for negative numbers, using abs()) | 1 |
+| Missing the recursion base case leading to infinite calls | 1 |
+| Appending wrong type to a list, creating a list with multiple types | 1 |
+| Not testing for Empty ([]) or with one item ["a"] | 1 |
+| Not unpacking properly | 1 |
+| Forgetting to add padding for number to string conversions (ex: time conversiongs) | 1 |
+| Improperly checking conditions (Ex: calendar matching) | 1 |
+| Forgetting to update some of the tracking variables in a while loop | 1 |
+| Declaring and using tracking variables too early | 1 |
+| Forgetting to type cast between layers | 1 |
+| Adding two different types (None + number) | 1 |
+| Infinite recursion (Wrong base case - off by one, etc) | 1 |
+| Returning null values and forgetting to check for null in the upper functions | 1 |
+| Jumping to conclusions too early without verifying | 1 |
+| Misinterpreting types | 1 |
+| Forgeting to send all arguments to a function | 1 |
+| Using same names for multiple temporary variables | 1 |
+| Forgeting the possibilities of negative and fractional values | 1 |
+| Using continue or break statements too early | 1 |
+| Using comparirions operators on None | 1 |
+
+
+### Off by one errors
+- Be careful with `>`, `<`, `>=`, `<=`. These usually cause errors at boundaries.
 
 ## Unique looping problems
 | # | Problem | Description |
@@ -371,6 +520,50 @@ and curr value.
 ### BFS & DFS
 - do not use .pop() too early, only when it makes sense.
 
+## Math Propblems
+
+### The Math Book (Clifford A. Pickover)
+- Calculating Pi (Pg 60)
+- Sieve of Erathosthenes (Pg 62)
+- Wheat on a chess board (pg 102)
+- Projective Geometry (Pg 142)
+- Torricelli's Trumpet (Pg 144)
+- Pascal's Triangle (Pg 146)
+- Viviani's Theorem (Pg 150)
+- Rope around the earth puzzle (Pg 162)
+- Konigsberg Bridges (Pg 174)
+- Goldbach conjecture
+- Euler's polygon division problem
+- Magic Square (pg 190)
+- Minimal Surface (Pg 192)
+- Knight's tour
+- Buffon's Needle (Pg 194)
+- Thirty-six Officers Problem (Pg 196)
+
 ## TO-DO
-- Implement the tree traversals (recursive & iterative in a separate file)
-- Finish `Find rotation point`
+- Implement the tree traversals (recursive & iterative in a separate file).
+- Learning how to convert recursion solutions into iterative ones.
+- Converting str time to int time and int time to str time.
+- Balancing a Binary search Tree.
+- Implement a Bloom Filter.
+- Implement a hashing algorithm.
+
+## Overall Programming Notes
+- Keep an eye on the common errors, repeat as less as possible.
+- Occam's razor (Look for the simplest idea that can solve the problem)
+- Two Key Points:
+    - What is the base case (given and default).
+    - Figure out what to do at each step to get to the answer.
+- Splitting by functionality makes testing easier in head or paper.
+
+## Problem solving steps
+- Completely understand the problem with test cases and discussing with peers or interviewers.
+This is the most vital step. 
+- Once you have an understanding of the problem, look at your past knowledge and see which area can
+help solve this problem.
+- It is vital to transpose the problem into different areas to see if it can help solve it.
+- Once you have a basic algorithm that can solve all the test cases. Identify repeated work and try 
+to reduce it.
+- Reduce unnecessary space usage.
+
+
