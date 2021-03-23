@@ -454,7 +454,7 @@ and curr value.
 ## Errors Stats
 |  Description | Num times 
 | --- | --- | 
-| Off by one error | 23 | 
+| Off by one error | 24 | 
 | Understanding the question wrong | 11 |
 | Infinite while loops (miss updating the index, missed tracking visited) | 14 |
 | Index out of bounds error (Forgetting to check for bounds in while loops, if conditions and for loops) | 10 |
@@ -498,7 +498,9 @@ and curr value.
 | Using same names for multiple temporary variables | 1 |
 | Forgeting the possibilities of negative and fractional values | 1 |
 | Using continue or break statements too early | 1 |
-| Using comparirions operators on None | 1 |
+| Using comparisions operators on None | 1 |
+| not returning any values from a function | 1 |
+| Renaming variables and not updating the function properly | 1 |
 
 
 ### Off by one errors
