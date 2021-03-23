@@ -8,9 +8,6 @@ Minimax algorithm recursively evaulates and finds the best move.
 - is_draw
 - evaluate
 """
-from enum import Enum
-from copy import deepcopy
-
 def make_move(board, location, piece):
     """Place a piece on board"""
     new_board = get_new_board()
@@ -118,10 +115,15 @@ def is_all_o(values):
     return True
 
 def evaluate(board, player, turn):
+    # if its a won alreadyand player's turn to play,
+    # then the position is lost for the player
     if is_win(board) and turn == player:
         return -1
+    # if its a winning position and it is not player's turn
+    # that means that the last move was winning so we choose this
     elif is_win(board) and turn != player:
         return 1
+    # if not winning, then it must be a drawn position
     else:
         return 0
         
@@ -132,6 +134,47 @@ def switch_piece(piece):
         return "X"
     else:
         return piece
+
+def minimax_alpha_beta(board, player, turn, alpha=float("-inf"), beta=float("inf"), depth = 0):
+    max_depth = 3
+    if is_win(board)\
+        or is_draw(board)\
+        or depth == max_depth:
+        return evaluate(board, player, turn)
+
+    if player == turn:
+        for move in get_legal_moves(board):
+            alpha = max(
+                alpha,
+                minimax_alpha_beta(
+                    make_move(board, move, turn),
+                    player,
+                    switch_piece(turn),
+                    alpha,
+                    beta
+                )
+            )
+            
+            if beta <= alpha:
+                break
+        return alpha
+    else:
+        for move in get_legal_moves(board):
+            beta = min(
+                beta,
+                minimax_alpha_beta(
+                    make_move(board, move, turn),
+                    player,
+                    switch_piece(turn),
+                    alpha,
+                    beta
+                )
+            )
+
+            if beta <= alpha:
+                break
+
+        return beta
     
 def minimax(board, player, turn, depth = 0):
     max_depth = 8
@@ -174,7 +217,9 @@ def find_best_move(board, piece):
     best_move_so_far = None
     
     for move in get_legal_moves(board):
-        result = minimax(
+        # here we make the first move and before sending it to minimax
+        # we switch the pieces
+        result = minimax_alpha_beta(
             make_move(board, move, piece),
             piece,
             switch_piece(piece)
@@ -206,15 +251,12 @@ def make_ai_move(board, piece):
     print(f"computer move is {move} with {piece}")
     return make_move(board, move, piece)
 
-def is_done(board):
-    return is_win(board) or is_draw(board)
-
 def play_tictactoe():
     board = get_new_board()
     human_piece = "X"
     ai_piece = "O"
     
-    while not is_done(board):
+    while True: 
         board = make_human_move(board, human_piece)
         if is_win(board):
             print("You win!")
