@@ -454,10 +454,10 @@ and curr value.
 ## Errors Stats
 |  Description | Num times 
 | --- | --- | 
-| Off by one error | 24 | 
-| Understanding the question wrong | 11 |
-| Infinite while loops (miss updating the index, missed tracking visited) | 14 |
-| Index out of bounds error (Forgetting to check for bounds in while loops, if conditions and for loops) | 10 |
+| Off by one error | 26 | 
+| Infinite while loops (miss updating the index, missed tracking visited) | 15 |
+| Understanding the question wrong | 12 |
+| Index out of bounds error (Forgetting to check for bounds in while loops, if conditions and for loops) | 13 |
 | Input or 3rd party library result validation (Checks for empty, in inner functions as well as main) | 5 |
 | Editing an incomplete or unfinished code leading to a cascade of errors | 4 |
 | Improper initialization values (None instead of infinities) | 3 |
@@ -501,6 +501,7 @@ and curr value.
 | Using comparisions operators on None | 1 |
 | not returning any values from a function | 1 |
 | Renaming variables and not updating the function properly | 1 |
+| Not initializing the step properly in a For loop | 1 |  
 
 
 ### Off by one errors
@@ -550,6 +551,9 @@ and curr value.
 - Implement a Bloom Filter.
 - Implement a hashing algorithm.
 
+## To-review
+- Go over algorithms that guarantee randomness.
+
 ## Overall Programming Notes
 - Keep an eye on the common errors, repeat as less as possible.
 - Occam's razor (Look for the simplest idea that can solve the problem)
@@ -568,4 +572,15 @@ help solve this problem.
 to reduce it.
 - Reduce unnecessary space usage.
 
+## Number notes
+- Num digits in a number for base b = floor(math.log(x, b)) + 1
 
+## Bit manipulation notes
+- `x & (x - 1)` = x with its lowest set bit erased.
+- `x & ~(x - 1)` = isolate the lowest bit.
+- XOR is commutative(order) & assosiative(grouping).
+
+## Editor Notes
+- Keep your editor configuration very simple.
+- Use your brain most of the time.
+- Use vim paired with tmux.
