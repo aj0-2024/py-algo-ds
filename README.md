@@ -6,7 +6,74 @@ Welcome ! This repository contains notes & implementations of various data struc
 
 Purely for educational purpose and not intended for any other use.
 
-\${toc}
+<!-- vim-markdown-toc Marked -->
+
+- [Algorithm Status Table](#algorithm-status-table)
+- [Data structures Status Table](#data-structures-status-table)
+- [Algorithm Review Table](#algorithm-review-table)
+- [Data structure review table](#data-structure-review-table)
+  - [To learn](#to-learn)
+- [Categories](#categories)
+  - [Geometry Problems](#geometry-problems)
+  - [Searching](#searching)
+  - [Path finding algorithms |](#path-finding-algorithms-|)
+  - [Sorting](#sorting)
+  - [Recursion](#recursion)
+    - [Notes](#notes)
+  - [Iteration](#iteration)
+  - [Dynamic Programming](#dynamic-programming)
+    - [Notes](#notes)
+    - [Approach](#approach)
+    - [Notes](#notes)
+  - [Divide & Conquer](#divide-&-conquer)
+  - [Greedy approach](#greedy-approach)
+    - [Notes](#notes)
+  - [Matrix Problems](#matrix-problems)
+  - [Array Problems](#array-problems)
+    - [Notes](#notes)
+  - [String Problems](#string-problems)
+    - [Notes](#notes)
+  - [Tree Problems](#tree-problems)
+    - [Notes](#notes)
+  - [Geometry Problems](#geometry-problems)
+  - [Bit Manipulation Problems](#bit-manipulation-problems)
+  - [Probability Problems |](#probability-problems-|)
+  - [Graph Problems](#graph-problems)
+    - [Notes](#notes)
+  - [Math Problems](#math-problems)
+  - [Sliding Window Problems](#sliding-window-problems)
+  - [Traversal Problems](#traversal-problems)
+  - [Linked List Problems](#linked-list-problems)
+    - [Notes](#notes)
+  - [Heap Problems](#heap-problems)
+  - [Trie Problems](#trie-problems)
+  - [Backtracking problems](#backtracking-problems)
+- [Build sequence Problems](#build-sequence-problems)
+- [Complex Runtime analysis](#complex-runtime-analysis)
+- [Edge case questions (Questions with lots of edge cases)](<#edge-case-questions-(questions-with-lots-of-edge-cases)>)
+  - [Review Problems for runtime analysis](#review-problems-for-runtime-analysis)
+- [Most Common Errors](#most-common-errors)
+  - [Off by one error](#off-by-one-error)
+  - [Understanding the question wrong or failing to get complete requirements](#understanding-the-question-wrong-or-failing-to-get-complete-requirements)
+  - [Infinite while loops](#infinite-while-loops)
+- [Errors Stats](#errors-stats)
+  - [Off by one errors](#off-by-one-errors)
+- [Unique looping problems](#unique-looping-problems)
+- [Tips](#tips)
+  - [While loops](#while-loops)
+  - [BFS & DFS](#bfs-&-dfs)
+- [Math Propblems](#math-propblems)
+  - [The Math Book (Clifford A. Pickover)](<#the-math-book-(clifford-a.-pickover)>)
+- [TO-DO](#to-do)
+- [To-review](#to-review)
+- [Overall Programming Notes](#overall-programming-notes)
+- [Problem solving steps](#problem-solving-steps)
+- [Number notes](#number-notes)
+- [Bit manipulation notes](#bit-manipulation-notes)
+- [Editor Notes](#editor-notes)
+- [Back of envelope calculation](#back-of-envelope-calculation)
+
+<!-- vim-markdown-toc -->
 
 ## Algorithm Status Table
 
@@ -46,7 +113,8 @@ Purely for educational purpose and not intended for any other use.
 | 32  | Find Rotation Point                                | 𐄂      |
 | 33  | Find Duplicate Integer                             | ✔︎     |
 | 34  | Towers of Hanoi                                    | ✔︎     |
-| 34  | Word Search                                        | ✔︎     |
+| 35  | Word Search                                        | ✔︎     |
+| 36  | Bellman ford algorithm                             | 𐄂      |
 
 ## Data structures Status Table
 
@@ -284,11 +352,13 @@ Purely for educational purpose and not intended for any other use.
 | 6   | Right smaller than                 |
 | 7   | Delete duplicate in a sorted array |
 | 8   | Dutch Flag partition               |
+| 9   | Longest Increasing Subsequence     |
 
 #### Notes
 
-- Two pointers, three pointers
-- max_so_far, min_so_far
+- Two pointers, three pointers.
+- Forward iteration, Backward iteration or both.
+- max_so_far, min_so_far (Greedy approach).
 - In a solution where we are tracking direction, check for an edge case where we
   might end up adding the same cell twice.
 
@@ -493,8 +563,8 @@ Purely for educational purpose and not intended for any other use.
 
 | Description                                                                                            | Num times |
 | ------------------------------------------------------------------------------------------------------ | --------- |
-| Off by one error                                                                                       | 28        |
-| Infinite while loops (miss updating the index, missed tracking visited)                                | 18        |
+| Off by one error                                                                                       | 29        |
+| Infinite while loops (miss updating the index, missed tracking visited)                                | 19        |
 | Understanding the question wrong                                                                       | 14        |
 | Index out of bounds error (Forgetting to check for bounds in while loops, if conditions and for loops) | 14        |
 | Input or 3rd party library result validation (Checks for empty, in inner functions as well as main)    | 5         |
@@ -634,3 +704,9 @@ Purely for educational purpose and not intended for any other use.
 - Keep your editor configuration very simple.
 - Use your brain most of the time.
 - Use vim paired with tmux.
+
+## Back of envelope calculation
+
+- Typical hard disk
+  - capacity: `6TB`.
+  - Sequential write throughput: `150 MB/s`.
