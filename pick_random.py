@@ -1,5 +1,21 @@
+"""
+TODO:
+    - Design patterns
+"""
+
 import random
 import click
+import json
+import datetime
+
+
+def add_update(entry):
+    with open('review_data.json', 'r+') as f:
+        content = json.load(f)
+        content.append(entry)
+        f.seek(0)
+        json.dump(content, f)
+        f.truncate()
 
 
 @click.group()
@@ -19,6 +35,10 @@ def algorithm():
         "Path finding"
     ])
     print("Topic for today is -->", topic)
+    add_update({
+        "datetime": datetime.datetime.now().isoformat(),
+        "algo_topic": topic
+    })
 
 
 @cli.command()
@@ -31,6 +51,10 @@ def system_design():
         "Stream systems", "Future of design systems"
     ])
     print("Topic for today is -->", topic)
+    add_update({
+        "datetime": datetime.datetime.now().isoformat(),
+        "algo_topic": topic
+    })
 
 
 if __name__ == "__main__":
