@@ -72,6 +72,7 @@ Purely for educational purpose and not intended for any other use.
 - [Bit manipulation notes](#bit-manipulation-notes)
 - [Editor Notes](#editor-notes)
 - [Back of envelope calculation](#back-of-envelope-calculation)
+- [Disks](#disks)
 
 <!-- vim-markdown-toc -->
 
@@ -225,6 +226,8 @@ Purely for educational purpose and not intended for any other use.
 | 5   | Heap Sort        |
 | 6   | Merge Sort       |
 | 7   | Topological sort |
+| 8   | Radix Sort       |
+| 9   | Stack Sort       |
 
 ### Recursion
 
@@ -239,6 +242,7 @@ Purely for educational purpose and not intended for any other use.
 | 7   | Max path sum of a Binary tree |
 | 8   | Minimax algorithm             |
 | 9   | Ambiguous measurements        |
+| 10  | Sort Stack                    |
 
 #### Notes
 
@@ -252,6 +256,7 @@ Purely for educational purpose and not intended for any other use.
   - The stack should probably hold more than one value per iteration.
   - pop() only when needed and peek() first.
   - Order of instructions is very important.
+- Use early termination techniques to reduce function calls on call stack.
 
 ### Iteration
 
@@ -392,33 +397,37 @@ Purely for educational purpose and not intended for any other use.
 
 ### Tree Problems
 
-| #   | Problem                               |
-| --- | ------------------------------------- |
-| 1   | Youngest common ancestor              |
-| 2   | Valid Binary Search Tree              |
-| 3   | Second Largest Item in BST            |
-| 4   | Find closest value in BST             |
-| 5   | Calculate Branch Sums                 |
-| 6   | Calculate Node Depths                 |
-| 7   | Min-Height BST                        |
-| 8   | Invert Binary Tree                    |
-| 9   | Binary Tree Diameter                  |
-| 10  | Max path sum                          |
-| 11  | Find kth largest number in BST        |
-| 12  | Construct BST from in-order traversal |
-| 13  | Height balanced Binary Tree           |
-| 14  | Lowest common manager                 |
-| 15  | Same BSTs                             |
-| 16  | Nodes at distance k                   |
-| 17  | Iterative in-order traversal          |
-| 18  | Flatten Binary Tree                   |
-| 19  | Sum of all node depths                |
-| 20  | Number of binary tree topologies      |
-| 21  | Finding the minimum spanning tree     |
+| #   | Problem                                              |
+| --- | ---------------------------------------------------- |
+| 1   | Youngest common ancestor (With & without parent)     |
+| 2   | Valid Binary Search Tree                             |
+| 3   | Second Largest Item in BST                           |
+| 4   | Find closest value in BST                            |
+| 5   | Calculate Branch Sums                                |
+| 6   | Calculate Node Depths                                |
+| 7   | Min-Height BST                                       |
+| 8   | Invert Binary Tree                                   |
+| 9   | Binary Tree Diameter                                 |
+| 10  | Max path sum                                         |
+| 11  | Find kth largest number in BST                       |
+| 12  | Construct BST from in-order traversal                |
+| 13  | Height balanced Binary Tree                          |
+| 14  | Lowest common manager                                |
+| 15  | Same BSTs                                            |
+| 16  | Nodes at distance k                                  |
+| 17  | Iterative in-order traversal                         |
+| 18  | Flatten Binary Tree                                  |
+| 19  | Sum of all node depths                               |
+| 20  | Number of binary tree topologies                     |
+| 21  | Finding the minimum spanning tree                    |
+| 22  | Iterative pre-order, in-order, post-order traversals |
+| 23  | Test if a binary tree is symmetric                   |
 
 #### Notes
 
 - If it's a binary search tree problem, think of a solution with min and max values so far.
+- If you have access to the parent node, optimum solution usually will have
+  `O(1)` space.
 
 ### Geometry Problems
 
@@ -494,15 +503,21 @@ Purely for educational purpose and not intended for any other use.
 
 ### Heap Problems
 
-| #   | Problem           |
-| --- | ----------------- |
-| 1   | Continuous Median |
+| #   | Problem                                  |
+| --- | ---------------------------------------- |
+| 1   | Continuous Median                        |
+| 2   | Sort K-sorted array                      |
+| 3   | Merge n sorted arrays                    |
+| 4   | Sort increasing-decreasing array         |
+| 5   | Compute k closest stars                  |
+| 6   | Compute k largest elements in a max-heap |
 
 ### Trie Problems
 
-| #   | Problem             |
-| --- | ------------------- |
-| 1   | Multi String Search |
+| #   | Problem                        |
+| --- | ------------------------------ |
+| 1   | Multi String Search            |
+| 2   | Building a string search index |
 
 ### Backtracking problems
 
@@ -563,15 +578,15 @@ Purely for educational purpose and not intended for any other use.
 
 | Description                                                                                            | Num times |
 | ------------------------------------------------------------------------------------------------------ | --------- |
-| Off by one error                                                                                       | 29        |
+| Off by one error                                                                                       | 31        |
 | Infinite while loops (miss updating the index, missed tracking visited)                                | 19        |
-| Understanding the question wrong                                                                       | 14        |
+| Understanding the question wrong                                                                       | 15        |
 | Index out of bounds error (Forgetting to check for bounds in while loops, if conditions and for loops) | 14        |
 | Input or 3rd party library result validation (Checks for empty, in inner functions as well as main)    | 5         |
 | Editing an incomplete or unfinished code leading to a cascade of errors                                | 4         |
-| Improper initialization values (None instead of infinities)                                            | 3         |
+| Assuming the intended pattern starts only a 0, it can start anywhere in between                        | 4         |
+| Improper initialization values (None instead of infinities)                                            | 4         |
 | Incompletely updating temporary variables or replacing with None (if conditions etc)                   | 3         |
-| Assuming the intended pattern starts only a 0, it can start anywhere in between                        | 3         |
 | referencing methods without the `_` usually given to private methods                                   | 3         |
 | Forgetting to back track path in a search (tree, graph)                                                | 2         |
 | Comparison b/w numbers( +ve, -ve) , initialize with "inf" or "-inf"                                    | 3         |
@@ -579,7 +594,7 @@ Purely for educational purpose and not intended for any other use.
 | Append takes only one argument                                                                         | 2         |
 | Spelling mistakes while writing variable names                                                         | 2         |
 | Sending wrong arguments or in a wrong order                                                            | 2         |
-| Not considering that array may have duplicate numbers within range                                     | 1         |
+| Not considering that array may have duplicate numbers within range                                     | 2         |
 | Sending wrong values in array iteration, or in wrong order                                             | 1         |
 | Drawing the wrong edges in a graph                                                                     | 1         |
 | Incorrectly reading question, wrong assumptions                                                        | 1         |
@@ -710,3 +725,8 @@ Purely for educational purpose and not intended for any other use.
 - Typical hard disk
   - capacity: `6TB`.
   - Sequential write throughput: `150 MB/s`.
+
+## Disks
+
+- `fsync`.
+- `rsync`.
